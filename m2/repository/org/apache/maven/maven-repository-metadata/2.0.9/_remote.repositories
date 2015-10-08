@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Aug 05 15:25:10 CDT 2015
+maven-repository-metadata-2.0.9.jar>nexus=
+maven-repository-metadata-2.0.9.pom>central=
+maven-repository-metadata-2.0.9.pom>nexus=

@@ -1,0 +1,190 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+	   <artifactId>oss-parent</artifactId>
+	   <groupId>org.sonatype.oss</groupId>
+	   <version>7</version>
+	</parent>
+	<groupId>org.mnode</groupId>
+	<artifactId>mnode-parent</artifactId>
+	<version>1.2</version>
+	<packaging>pom</packaging>
+	<name>Micronode Parent POM</name>
+	<description>Common maven settings for all Micronode projects</description>
+	<inceptionYear>2011</inceptionYear>
+	<url>http://mnode.org</url>
+	<ciManagement>
+        <system>Continuum</system>
+        <url>http://modularity.servehttp.com/continuum</url>
+    </ciManagement>
+    <organization>
+        <name>Micronode</name>
+        <url>http://micronode.com</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>fortuna</id>
+            <name>Ben Fortuna</name>
+            <email>fortuna@micronode.com</email>
+            <url>http://basepatterns.org</url>
+            <organization>Micronode</organization>
+            <organizationUrl>http://micronode.com</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>Australia/Melbourne (UTC+10:00)</timezone>
+        </developer>
+    </developers>
+    <licenses>
+        <license>
+            <name>Micronode - License</name>
+            <url>LICENSE</url>
+        </license>
+    </licenses>
+    
+    <scm>
+        <connection>scm:svn:http://svn.mnode.org/base/mnode-parent/tags/mnode-parent-1.2</connection>
+        <developerConnection>scm:svn:http://svn.mnode.org/base/mnode-parent/tags/mnode-parent-1.2</developerConnection>
+        <url>http://svn.mnode.org/base/mnode-parent/tags/mnode-parent-1.2</url>
+    </scm>
+    
+    <distributionManagement>
+        <site>
+            <id>mnode-site</id>
+            <name>Micronode Project Site</name>
+            <url>scp://build.mnode.org/home/modularity/build.mnode.org/projects</url>
+        </site>
+    </distributionManagement>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+<!-- Already defined in the sonatype parent pom.. -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+        </plugins>
+        
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.mycila.maven-license-plugin</groupId>
+                    <artifactId>maven-license-plugin</artifactId>
+                    <version>1.9.0</version>
+                    <configuration>
+                        <header>etc/header.txt</header>
+                        <failIfMissing>true</failIfMissing>
+                        <strictCheck>true</strictCheck>
+                        <properties>
+                            <year>2011</year>
+                            <email>fortuna@micronode.com</email>
+                        </properties>
+                        <includes>
+                            <include>src/**</include>
+                        </includes>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            
+	            <plugin>
+	                <groupId>org.apache.maven.plugins</groupId>
+	                <artifactId>maven-checkstyle-plugin</artifactId>
+	                <configuration>
+	                   <configLocation>http://svn.mnode.org/tools/checkstyle/mnode_checks.xml</configLocation>
+	                   <suppressionsLocation>http://svn.mnode.org/tools/checkstyle/default-suppressions.xml</suppressionsLocation>
+	                </configuration>
+	            </plugin>
+	
+	            <plugin>
+	                <groupId>org.apache.maven.plugins</groupId>
+	                <artifactId>maven-pmd-plugin</artifactId>
+	                <configuration>
+	                    <linkXref>true</linkXref>
+	                    <targetJdk>1.5</targetJdk>
+	                    <rulesets>
+	                        <ruleset>http://svn.mnode.org/tools/pmd/mnode_ruleset.xml</ruleset>
+	                    </rulesets>
+	                </configuration>
+	            </plugin>
+	            
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<version>2.6</version>
+				</plugin>
+    
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>2.3</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.8.2</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
+    <profiles>
+		<profile>
+			<id>deploy-to-mnode</id>
+			<activation>
+				<property>
+					<name>deployToMnode</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<distributionManagement>
+				<repository>
+					<id>mnode-releases</id>
+					<name>Micronode Maven Repository</name>
+					<url>scp://build.mnode.org/home/modularity/build.mnode.org/releases</url>
+				</repository>
+				<snapshotRepository>
+					<id>mnode-snapshots</id>
+					<name>Micronode Snapshot Repository</name>
+					<url>scp://build.mnode.org/home/modularity/build.mnode.org/snapshots</url>
+					<uniqueVersion>false</uniqueVersion>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+    </profiles>
+</project>

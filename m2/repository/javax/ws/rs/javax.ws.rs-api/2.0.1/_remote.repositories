@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Oct 07 09:31:49 CDT 2015
+javax.ws.rs-api-2.0.1.jar>central=
+javax.ws.rs-api-2.0.1.pom>nexus=
+javax.ws.rs-api-2.0.1.pom>central=
+javax.ws.rs-api-2.0.1.jar>nexus=

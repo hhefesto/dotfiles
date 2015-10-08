@@ -1,0 +1,359 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/hefesto/BM/bmi-products/interpretes/agreementScaleTask/catalog/" . "temp/")
+ ("/home/hefesto/BM/bmi-products/interpretes/dateFilterTask/" . "catalog/")
+ ("/home/hefesto/BM/bmi-products/interpretes/frequencyScaleTask/" . "catalogs/")
+ ("/home/hefesto/BM/bmi-products/interpretes/agreementScaleTask/" . "catalog/")
+ ("/home/hefesto/BM/bmi-products/interpretes/" . "agreementScaleTask/")
+ ("/home/hefesto/BM/bmi-products/" . "interpretes/")
+ ("/home/hefesto/dev/com.slice.webpage/target/" . "classes/")
+ ("/home/hefesto/dev/com.slice.webpage/resources/public/" . "js/")
+ ("/home/hefesto/dev/com.slice.webpage/resources/" . "docs/")
+ ("/home/hefesto/dev/com.slice.webpage/src/com/slice/webpage/" . "routes/")
+ ("/home/hefesto/dev/com.slice.webpage/src/com/slice/" . "webpage/")
+ ("/home/hefesto/dev/com.slice.webpage/src/com/" . "slice/")
+ ("/home/hefesto/dev/com.slice.webpage/src/" . "com/")
+ ("/home/hefesto/dev/com.slice.webpage/com/" . "slice/")
+ ("/home/hefesto/dev/com.slice.webpage/" . "resources/")
+ ("/home/hefesto/bin/" . "cabal/")
+ ("/home/hefesto/BM/catalogos/escalas/" . "escalaFrecuencia/")
+ ("/home/hefesto/BM/catalogos/opcion-multiple/" . "razasPerros/")
+ ("/home/hefesto/BM/catalogos/" . "escalas/")
+ ("/home/hefesto/src/windows_competition/dijkstra/src/" . "dijkstra/")
+ ("/home/hefesto/src/windows_competition/dijkstra/" . "src/")
+ ("/home/hefesto/src/windows_competition/" . "dijkstra/")
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/dateParser/" . "test/")
+ ("/home/hefesto/BM/interpreters/" . "tasks/")
+ ("/home/hefesto/Documents/BM/" . "problemas_afin_clojure/")
+ ("/home/hefesto/Downloads/GC Proyecto1/" . "GC Proyecto1/")
+ ("/home/hefesto/Downloads/" . "AntlrDate/")
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/" . "dateParser/")
+ ("/home/hefesto/dev/ejemplo.sargent/src/" . "ejemplo/")
+ ("/home/hefesto/dev/ejemplo.sargent/" . "src/")
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/com/bm/bmi/" . "antlr/")
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/com/bm/bmi/" . "antlr/")
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/com/bm/" . "bmi/")
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/com/" . "bm/")
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/" . "com/")
+ ("/home/hefesto/BM/Catalogos/" . "NumerizerTask/")
+ ("/home/hefesto/dev/com.bm.bmi.aux/src/com/bm/" . "bmi/")
+ ("/home/hefesto/dev/com.bm.bmi.aux/src/com/" . "bm/")
+ ("/home/hefesto/dev/com.bm.bmi.aux/src/" . "com/")
+ ("/home/hefesto/dev/com.bm.bmi.aux/" . "src/")
+ ("/home/hefesto/src/clj-antlr/src/" . "clj_antlr/")
+ ("/home/hefesto/src/clj-antlr/" . "src/")
+ ("/home/hefesto/src/" . "windows_competition/")
+ ("/home/hefesto/.emacs.d/elpa/" . "zenburn-theme-20150701.2237/")
+ ("/home/hefesto/.emacs.d/" . "elpa/")
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/com/bm/" . "bmi/")
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/com/" . "bm/")
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/" . "java/")
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/" . "resources/")
+ ("/home/hefesto/BM/DateParser/" . "com.bm.bmi.date/")
+ ("/home/hefesto/dev/com.domain.tiny/src/com/" . "domain/")
+ ("/home/hefesto/dev/com.domain.tiny/src/" . "com/")
+ ("/home/hefesto/dev/com.domain.tiny/" . "src/")
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/bm/" . "bmi/")
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/" . "bm/")
+ ("/home/hefesto/BM/bmi-library/src/main/java/" . "com/")
+ ("/home/hefesto/BM/bmi-library/src/main/" . "java/")
+ ("/home/hefesto/BM/bmi-library/src/" . "main/")
+ ("/home/hefesto/BM/bmi-library/" . "src/")
+ ("/home/hefesto/BM/" . "bmi-products/")
+ ("/home/hefesto/temp/" . "emacs-for-clojure/")
+ ("/home/hefesto/Eclipse_Workspace/natty/src/main/antlr3/com/joestelmach/natty/" . "generated/")
+ ("/home/hefesto/Eclipse_Workspace/natty/src/main/antlr3/com/joestelmach/" . "natty/")
+ ("/home/hefesto/Eclipse_Workspace/natty/src/main/antlr3/com/" . "joestelmach/")
+ ("/home/hefesto/Eclipse_Workspace/natty/src/main/antlr3/" . "com/")
+ ("/home/hefesto/Eclipse_Workspace/natty/src/main/" . "antlr3/")
+ ("/home/hefesto/Eclipse_Workspace/natty/src/" . "main/")
+ ("/home/hefesto/Eclipse_Workspace/natty/" . "src/")
+ ("/" . "home/")
+ ("/home/hefesto/dev/entrepeneurship/resources/" . "public/")
+ ("/home/hefesto/dev/myfirstwebapp/src/" . "myfirstwebapp/")
+ ("/home/hefesto/dev/myfirstwebapp/" . "src/")
+ ("/home/hefesto/dev/entrepeneurship/src/" . "entrepeneurship/")
+ ("/home/hefesto/dev/entrepeneurship/" . "resources/")
+ ("/home/hefesto/dev/" . "com.slice.webpage/")
+ ("/home/hefesto/Eclipse_Workspace/Chronic_Numerizer/" . "src/")
+ ("/home/hefesto/Eclipse_Workspace/" . "natty/")
+ ("/home/hefesto/Documents/" . "BM/")
+ ("/home/hefesto/" . "BM/")
+ ("/home/" . "hefesto/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/hefesto/BM/bmi-products/interpretes/agreementScaleTask/"
+ "/home/hefesto/BM/bmi-products/interpretes/agreementScaleTask/catalog/temp/"
+ "/home/hefesto/.emacs.d/"
+ "/home/hefesto/BM/bmi-products/interpretes/agreementScaleTask/catalog/"
+ "/home/hefesto/BM/bmi-products/interpretes/opinionScaleTask/"
+ "/home/hefesto/BM/bmi-products/interpretes/frequencyScaleTask/catalogs/"
+ "/home/hefesto/BM/bmi-products/interpretes/frequencyScaleTask/"
+ "/home/hefesto/BM/bm-api/"
+ "/home/hefesto/"
+ "/home/hefesto/BM/bmi-products/interpretes/dateFilterTask/"
+ "/home/hefesto/BM/bmi-products/interpretes/dateFilterTask/catalog/"
+ "/home/hefesto/dev/com.slice.webpage/resources/docs/"
+ "/home/hefesto/dev/com.slice.webpage/resources/templates/"
+ "/home/hefesto/dev/com.slice.webpage/src/com/slice/webpage/"
+ "/home/hefesto/dev/com.slice.webpage/src/com/slice/webpage/routes/"
+ "/home/hefesto/dev/com.slice.webpage/com/slice/"
+ "/home/hefesto/dev/com.slice.webpage/resources/sql/"
+ "/home/hefesto/dev/com.slice.webpage/resources/migrations/"
+ "/home/hefesto/dev/aleff/"
+ "/home/hefesto/bin/"
+ "/home/hefesto/bin/cabal/"
+ "/home/hefesto/bin/ghc-7.10.2/"
+ "/home/hefesto/bin/haskell-platform/"
+ "/home/hefesto/BM/catalogos/escalas/escalaFrecuencia/"
+ "/home/hefesto/BM/interpreters/tasks/"
+ "/home/hefesto/BM/catalogos/opcion-multiple/razasPerros/"
+ "/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/dateParser/"
+ "/home/hefesto/src/windows_competition/dijkstra/src/dijkstra/"
+ "/home/hefesto/Downloads/AntlrDate/"
+ "/home/hefesto/Documents/BM/"
+ "/home/hefesto/BM/bmi-library/.settings/"
+ "/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/testDateParser/"
+ "/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/dateParser/test/"
+ "/home/hefesto/BM/commons/"
+ "/home/hefesto/BM/interpreters/dialogs/"
+ "/home/hefesto/BM/Interpreter_Tasks/"
+ "/home/hefesto/Downloads/"
+ "/home/hefesto/Documents/BM/problemas_afin_clojure/"
+ "/home/hefesto/src/graficas_por_computadora/"
+ "/home/hefesto/Downloads/GC Proyecto1/GC Proyecto1/"
+ "/home/hefesto/test/"
+ "/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/DateParser/"
+ "/home/hefesto/BM/"
+ "/home/hefesto/.xmonad/"
+ "/home/hefesto/BM/DateParser/com.bm.bmi.date/resources/"
+ "/home/hefesto/.dotfiles/"
+ "/home/hefesto/dev/com.domain.tiny/src/com/domain/"
+ "/home/hefesto/dev/ejemplo.sargent/src/ejemplo/"
+ "/home/hefesto/BM/DateParser/com.bm.bmi.date/src/com/bm/bmi/antlr/"
+ "/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/com/bm/bmi/antlr/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "README.md"
+ "catalogWithOptionsBipolar.tsv"
+ "init.el"
+ "agreementScaleTask.json"
+ "opinionScaleTask.json"
+ "CatalogWithOptionsFrec.tsv"
+ "frequencyScaleTask.json"
+ "curl.org"
+ ".zshrc"
+ "dateFilterTask.json"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/hefesto/BM/bmi-products/interpretes/agreementScaleTask/catalog/temp/" (22037 21569 470490 899000) "./" "../" ".#catalogWithOptionsBipolar.tsv" "catalogWithOptionsBipolar.tsv")
+
+ ("/home/hefesto/BM/bmi-products/interpretes/agreementScaleTask/catalog/" (22037 21056 82169 150000) "./" "../" "agreementScaleCatalog.tsv" "temp/" "catalogWithOptionsBipolar.tsv")
+
+ ("/home/hefesto/" (22037 21067 837291 3000) "Eclipse_Workspace/" "Downloads/" ".arduino15/" ".bash_history" ".bash_profile" ".dotfiles/" "Music/" "Videos/" ".zsh-update" "Arduino/" ".npm/" ".mozilla/" ".xmonad/" ".gimp-2.8/" ".oracle_jre_usage/" ".mysql/" ".oh-my-zsh/" "workspace/" "./" ".zsh_history" "../" ".android/" ".notas~" ".zshrc~" "Desktop/" ".gnome/" ".bashrc" ".dropbox-dist/" ".zshrc" ".pki/" "dev/" ".zcompdump-Olimpo-5.0.8" ".gitconfig" ".vim/" "tmp/" ".java/" ".m2/" "Calibre Library/" "src/" ".eclipse/" ".viminfo" ".lein/" ".notas.org~" "test/" ".jssc/" "temp/" ".cache/" ".Skype/" "bin/" ".notas.org" ".dropbox/" ".xmobarrc" ".local/" ".mysql_history" ".gitignore_global" "Pictures/" ".thumbnails/" "keys/" ".ICEauthority" ".xsession" ".config/" ".gnupg/" ".cabal/" "Dropbox/" ".emacs.d/" ".bash_logout" "BM/" "Templates/" ".lesshst" ".esd_auth" "Documents/" ".ssh/" "Public/")
+
+ ("/home/hefesto/.emacs.d/" (22037 16862 478846 925000) "auto-save-list/" "init.el" "session.10138ef2e6be727759144413866537226800000046030037" "session.10bd7bc5748efe37a3143959964369820500000020490036" "session.10ede1f9e8872eeb9c143935367847856400000020550035" "./" "../" "yasnippet-snippets/" "session.10cba81b01959d69e4143924504769224500000022540051" "#recentf#" "elpa/" "session.10d3cc054fadc3b354144414352548084500000071500041" "session.10372eb337c49c1b6144415652774649500000020160037" "session.10db1aff1c2dea9fd143956811313347000000021120037" "session.10ae840894de6b6730144418108646645400000062630040" "Git-pluggins/" "ido.last" "session.101ef1fc8c491644fe144415089763649300000021150041" "recentf" ".init.el.swp" "ac-comphist.dat")
+
+ ("/home/hefesto/BM/bm-api/" (22037 13970 350884 28000) "curl.org" "target/" "pom.xml" ".gitattributes" "data/" "./" "../" ".project" ".classpath" "src/" ".gitignore" ".settings/" "build.properties" ".git/")
+
+ ("/home/hefesto/BM/bmi-products/interpretes/dateFilterTask/catalog/" (22034 44139 631876 553000) "spellingDateCatalog.tsv" "./" "../")
+
+ ("/home/hefesto/BM/bmi-products/interpretes/dateFilterTask/" (22036 1459 464659 855000) "dateFilterTask.json" "./" "../" "catalog/" "README.md")
+
+ ("/home/hefesto/BM/bmi-products/interpretes/agreementScaleTask/" (22036 1317 746537 568000) "./" "../" "agreementScaleTask.json" "catalog/" "README.md")
+
+ ("/home/hefesto/BM/bmi-products/interpretes/frequencyScaleTask/" (22036 1277 918214 742000) "./" "../" "catalogs/" "frequencyScaleTask.json" "README.md")
+
+ ("/home/hefesto/BM/bmi-products/interpretes/opinionScaleTask/" (22036 1236 838881 776000) "opinionScaleTask.json" "./" "../" "catalogs/" "README.md")
+
+ ("/home/hefesto/BM/bmi-products/interpretes/frequencyScaleTask/catalogs/" (22036 923 549342 428000) "./" "../" "frequencyScaleCatalog.tsv" "CatalogWithOptionsFrec.tsv")
+
+ ("/home/hefesto/Downloads/" (22035 64952 466318 386000) "IMG_20150921_232951.jpg" "Cabal-1.22.4.0.tar.gz" "IMG_20150921_232552.jpg" ".#geoLocs.org" "Práctica 2 - Configuracion del Ambiente(AWS)2.docx" "IMG_20150921_232641.jpg" "node-install.sh" "IMG_20150921_232623.jpg" "ghc-7.10.2-x86_64-unknown-linux-centos66.tar.xz" "cedula3.doc" "Fedora-Live-Workstation-x86_64-22-3.iso" "EstadoDeCuentaBancomerCreditoJulio.pdf" "./" "graficasPrimerExamen.docx" "cedula3 (1).doc" "../" "bootstrap-3.3.5.zip" "Análisis - 7.pdf" "SLICE_KEY.pem" "graficasPrimerExamen.odt" "arduino-1.6.5-r5-linux64.tar.xz" "PSS_10_Spanish_PuertoRican.doc" ".~lock.graficasPrimerExamen.docx#" "credenciales ACM.doc" ".~lock.Práctica 3 -Arduino e Internet.docx#" "Práctica 3 -Arduino e Internet.docx" "graficasPrimerExamen.pdf" "jdk-8u60-linux-x64.rpm" "AntlrDate/" "SCEP2.pem" "Graficasprimero.docx" ".~lock.credenciales ACM.doc#" "opcion_multiple.js" "PracticeInput (1).txt" "Primeros pasos con Yún.docx" "EstadoDeCuentaBancomerCreditoAgosto.pdf" "IMG_20150921_232528.jpg" "PracticeInput.txt" "genderTask.zip" "Arduino.sql" "AntlrDate.zip" ".#resultsHasta4.csv.org" ".~lock.INGRESOS 2015 ahg.xlsx#")
+
+ ("/home/hefesto/dev/com.slice.webpage/src/com/slice/webpage/routes/" (22035 30559 264164 797000) "./" "../" "home.clj")
+
+ ("/home/hefesto/dev/com.slice.webpage/resources/docs/" (22035 30645 775087 250000) "docs.md" "./" "../" "partners.md")
+
+ ("/home/" (21917 41377 737969 249000) "./" "../" "hefesto/" "lost+found/")
+
+ ("/home/hefesto/.emacs.d/elpa/" (21988 62567 7462 955000) "request-20140316.417/" "archives/" "autopair-20140825.427/" "rainbow-mode-0.11/" "exec-path-from-shell-20150801.104/" "cider-20150805.418/" "haskell-mode-20150814.1058/" "pos-tip-20150318.813/" "s-20140910.334/" "gnupg/" "./" "../" "ido-completing-read+-20150630.926/" "4clojure-20131014.1507/" "tagedit-20150727.224/" "clojure-mode-20150804.1311/" "queue-0.1.1.signed" "rainbow-delimiters-20150320.17/" "auto-complete-20150618.1949/" "magit-popup-20150730.1344/" "ace-window-readme.txt" "paredit-20150217.713/" "multi-term-20150220.1320/" "auctex-11.88.6.signed" "ido-ubiquitous-20150630.926/" "epl-20150517.433/" "smex-20141210.1422/" "dash-20150717.1321/" "emacs-eclim-20150731.728/" "git-commit-20150727.1401/" "magit-20150804.1527/" "auctex-11.88.6/" "rainbow-mode-0.11.signed" "pkg-info-20150517.443/" "zenburn-theme-20150701.2237/" "with-editor-20150710.252/" "popup-20150626.711/" "clojure-mode-extra-font-locking-20150110.505/" "queue-0.1.1/" "autotest-readme.txt" "projectile-20150728.2141/")
+
+ ("/home/hefesto/BM/bmi-products/interpretes/" (22034 43944 132717 566000) "opinionScaleTask/" "zipcodeTask/" "binaryOpinionTask/" "numericTask/" "./" "yesNoTask/" "../" "agreementScaleTask/" "dateFilterTask/" "emailTask/" "phoneTask/" "stateTask/" "frequencyScaleTask/" "genderTask/")
+
+ ("/home/hefesto/BM/bmi-products/" (22028 1654 772119 715000) "./" "../" "catalogos compartidos/" "interpretes/" ".git/")
+
+ ("/home/hefesto/dev/com.slice.webpage/" (22035 30803 341767 356000) "Procfile" "target/" "com/" "profiles.clj" "./" "../" "resources/" "src/" ".gitignore" "dev-resources/" "test/" ".lein-env" "project.clj" ".git/" "README.md")
+
+ ("/home/hefesto/dev/com.slice.webpage/dev-resources/" (22035 25047 84965 228000) "./" "../")
+
+ ("/home/hefesto/dev/com.slice.webpage/target/classes/" (22035 25047 85965 238000) "./" "../" "META-INF/")
+
+ ("/home/hefesto/dev/com.slice.webpage/target/" (22035 25048 319977 326000) "stale/" "./" "../" "classes/")
+
+ ("/home/hefesto/dev/com.slice.webpage/resources/public/css/" (22035 24976 228238 579000) "./" "../" "screen.css")
+
+ ("/home/hefesto/dev/com.slice.webpage/resources/public/js/" (22035 24976 229238 590000) "./" "../")
+
+ ("/home/hefesto/dev/com.slice.webpage/resources/public/" (22035 24976 229238 590000) "js/" "img/" "./" "../" "favicon.ico" "css/")
+
+ ("/home/hefesto/dev/com.slice.webpage/resources/templates/" (22035 28691 392008 640000) "error.html" "home.html" "./" "../" "partners.html" "about.html" "base.html")
+
+ ("/home/hefesto/temp/" (22035 28177 400695 490000) "!home!hefesto!BM!catalogos!opcion-multiple!razasPerros!MoreOptions.tsv~" "!home!hefesto!.emacs.d!elpa!request-20140316.417!request-autoloads.el~" "!home!hefesto!BM!catalogos!escalas!escalaFrecuencia!CatalogWithOptions.tsv~" "!home!hefesto!BM!catalogos!escalas!escalaFrecuencia!MoreOptionsFrec.tsv~" "!home!hefesto!BM!bmi-products!interpretes!numericTask!README.md~" "!home!hefesto!BM!DateParser!com.bm.bmi.date!src!com!bm!bmi!date.clj~" "!home!hefesto!BM!catalogos!opcion-multiple!razasPerros!CatalogWithOptions.tsv~" "!home!hefesto!test!update.sh~" "!home!hefesto!BM!bmi-products!interpretes!bipolarScaleTask!catalog!bipolarScaleCatalog.tsv~" "!home!hefesto!Documents!BM!objetivos.txt~" "!home!hefesto!bin!configure-aws.sh~" "!home!hefesto!dev!com.slice.webpage!resources!templates!partners.html~" "!home!hefesto!src!graficas_por_computadora!sistema_solar!del_profesor.cpp~" "!home!hefesto!BM!bmi-library!.git!rebase-merge!git-rebase-todo~" "!home!hefesto!.zshrc~" "!home!hefesto!BM!bmi-products!interpretes!posNegScaleTask!catalogs!posNegScaleCatalog.tsv~" "!home!hefesto!dev!com.bm.bmi.aux!src!com!bm!bmi!aux.clj~" "!home!hefesto!BM!Catalogos!NumerizerTask!numbers_spelling_catalog.tsv~" "!home!hefesto!src!graficas_por_computadora!getting-started_3!getting-started_3.cpp~" "!home!hefesto!.emacs.d!elpa!exec-path-from-shell-20150801.104!exec-path-from-shell-autoloads.el~" "!home!hefesto!.emacs.d!elpa!pos-tip-20150318.813!pos-tip-autoloads.el~" "!home!hefesto!.lein!project.clj~" "!home!hefesto!BM!bmi-products!interpretes!bipolarScaleTask!bipolarScaleTask.json~" "!home!hefesto!Documents!BM!problemas_afin_clojure!outline.org~" "!home!hefesto!Documents!BM!problemas_afin_clojure!problemas_afin_clojure.tex~" "!home!hefesto!.xmonad!xmonad.hs~" "!home!hefesto!src!graficas_por_computadora!sistema_solar!compile.sh~" "!home!hefesto!dev!com.slice.webpage!resources!migrations!20151002213105-add-users-table.up.sql~" "!home!hefesto!test!DateGrammar.g4~" "!home!hefesto!.emacs.d!elpa!haskell-mode-20150814.1058!haskell-mode-autoloads.el~" "!home!hefesto!BM!bmi-library!.git!COMMIT_EDITMSG~" "#!home!hefesto!BM!bmi-products!interpretes!agreementScaleTask!catalog!catalogWithOptionsBipolar.tsv#" "!home!hefesto!dev!com.slice.webpage!resources!templates!about.html~" "!home!hefesto!BM!bmi-products!interpretes!bipolarScaleTask!agreementScaleTask.json~" "!home!hefesto!.emacs.d!recentf~" "!home!hefesto!BM!catalogos!escalas!escalaOpinionBipolar!catalogWithOptionsBipolar.tsv~" "!home!hefesto!BM!catalogos!escalas!escalaOpinionPosNeg!catalogWithOptionsPosNeg.tsv~" "!home!hefesto!BM!bmi-library!src!main!java!com!bm!bmi!dateParser!DateGrammar.g4~" "!home!hefesto!dev!com.slice.webpage!resources!docs!docs.md~" "!home!hefesto!.gitignore_global~" "!home!hefesto!BM!Interpreter_Tasks!DateFilter.json~" "!home!hefesto!dev!com.slice.webpage!project.clj~" "!home!hefesto!.emacs.d!init.el~" "!home!hefesto!Documents!BM!metrica_objetivos_semanales.org~" "!home!hefesto!src!graficas_por_computadora!getting-started.cpp~" "!home!hefesto!src!graficas_por_computadora!lesson5!lesson5.cpp~" "!home!hefesto!BM!interpreters!tasks!escalaFrecuencias.js~" "!home!hefesto!BM!DateParser!com.bm.bmi.date!resources!DateExpr.g4~" "!home!hefesto!dev!com.domain.tiny!src!com!domain!tiny.clj~" "!home!hefesto!BM!bmi-products!interpretes!opinionScaleTask!README.md~" "!home!hefesto!src!graficas_por_computadora!lesson5!compile.sh~" "!home!hefesto!dev!com.slice.webpage!src!com!slice!webpage!routes!home.clj~" "!home!hefesto!dev!com.slice.webpage!resources!public!css!screen.css~" "!home!hefesto!BM!Interpreter_Tasks!opcion_multiple.js~" "!home!hefesto!.emacs.d!elpa!4clojure-20131014.1507!4clojure-autoloads.el~" "Self.less.2015.BRRip.XviD-ETRG/" "!home!hefesto!bin!install-emacs-aws.sh~" "!home!hefesto!src!graficas_por_computadora!getting-started_3!compile.sh~" "!home!hefesto!BM!bmi-products!interpretes!bipolarScaleTask!catalog!catalogWithOptionsBipolar.tsv~" "!home!hefesto!BM!bmi-products!interpretes!frequencyScaleTask!README.md~" "!home!hefesto!src!windows_competition!dijkstra!src!dijkstra!core.clj~" "!home!hefesto!temp!marco!hola_argumentos.c~" "!home!hefesto!DateGrammar.g4~" "!home!hefesto!BM!catalogos!escalas!escalaFrecuencia!CatalogWithOptionsFrec.tsv~" "!home!hefesto!BM!bmi-products!interpretes!posNegScaleTask!opinionScaleTask.json~" "!home!hefesto!.emacs.d!ido.last~" "!home!hefesto!BM!bm-api!curl.org~" "!home!hefesto!BM!bmi-library!src!main!java!com!bm!bmi!dateParser!JavaBM.xml~" "!home!hefesto!BM!interpreters!tasks!escalaOpinonBipolar.js~" "!home!hefesto!dev!com.slice.webpage!resources!templates!base.html~" "!home!hefesto!dev!com.slice.webpage!resources!templates!home.html~" "!home!hefesto!.lein!profiles.clj~" "!home!hefesto!BM!bmi-library!src!main!java!com!bm!bmi!DateParser!DateExpr.g4~" "!home!hefesto!BM!interpreters!tasks!opcion_multiple.js~" "!home!hefesto!BM!catalogos!escalas!escalaOpinionBipolar!catalogWithOptionsPosNeg.tsv~" "!home!hefesto!BM!bmi-products!interpretes!agreementScaleTask!README.md~" "!home!hefesto!src!graficas_por_computadora!sistema_solar!examen_parcial1.cpp~" "!home!hefesto!.dotfiles!makesymlinks.sh~" "!home!hefesto!BM!bmi-library!src!main!java!com!bm!bmi!DateParser!updateGrammar.sh~" "!home!hefesto!src!graficas_por_computadora!compile.sh~" "!home!hefesto!src!graficas_por_computadora!lesson3_2!lesson3_2.cpp~" "!home!hefesto!src!graficas_por_computadora!getting-started_2!getting-started_2.cpp~" "!home!hefesto!src!graficas_por_computadora!getting-started_2!compile.sh~" "!home!hefesto!BM!DateParser!com.bm.bmi.date!project.clj~" "!home!hefesto!BM!Interpreter_Tasks!Numerizer.json~" "!home!hefesto!BM!interpreters!tasks!PosNegOpinionScale.js~" "!home!hefesto!BM!bmi-library!src!main!java!com!bm!bmi!DateParser!DateGrammar.g4~" "!home!hefesto!src!graficas_por_computadora!lesson3_2!compile.sh~" "../" "./")
+
+ ("/home/hefesto/bin/" (22035 25688 51220 554000) "arduino/" "node-install.sh" "./" "cabal/" "../" "haskell-platform/" "configure-aws.sh")
+
+ ("/home/hefesto/dev/com.slice.webpage/resources/migrations/" (22035 24976 232238 622000) "20151006005216-add-users-table.up.sql" "./" "../" "20151006005216-add-users-table.down.sql")
+
+ ("/home/hefesto/dev/com.slice.webpage/resources/sql/" (22035 24976 231238 611000) "./" "../" "queries.sql")
+
+ ("/home/hefesto/dev/com.slice.webpage/com/slice/" (22035 25098 393467 855000) "./" "../" "webpage_dev.db.mv.db" "webpage.log")
+
+ ("/home/hefesto/dev/com.slice.webpage/com/" (22035 25061 130102 816000) "slice/" "./" "../")
+
+ ("/home/hefesto/dev/com.slice.webpage/resources/" (22035 24976 231238 611000) "./" "../" "migrations/" "docs/" "templates/" "sql/" "public/")
+
+ ("/home/hefesto/dev/com.slice.webpage/src/com/slice/webpage/" (22035 24976 230238 601000) "middleware.clj" "./" "../" "handler.clj" "layout.clj" "db/" "routes/" "core.clj")
+
+ ("/home/hefesto/dev/com.slice.webpage/src/com/slice/" (22035 24976 224238 537000) "./" "../" "webpage/")
+
+ ("/home/hefesto/dev/com.slice.webpage/src/com/" (22035 24976 224238 537000) "slice/" "./" "../")
+
+ ("/home/hefesto/dev/com.slice.webpage/src/" (22035 24976 224238 537000) "com/" "./" "../")
+
+ ("/home/hefesto/dev/" (22035 24976 220238 494000) "./" "../" "com.slice.webpage/" "aleff/" "obsoletos/")
+
+ ("/home/hefesto/dev/aleff/" (22035 13851 664245 228000) "text.txt" "cabal.sandbox.config" "./" "../" ".cabal-sandbox/")
+
+ ("/home/hefesto/.lein/" (22024 39139 9934 604000) "indices/" "profiles.clj" "./" "../" "self-installs/")
+
+ ("/home/hefesto/.xmonad/" (22017 31704 771380 856000) "xmonad.hi" "./" "xmonad.errors" "../" "xmonad.hs" "xmonad-x86_64-linux" "xmonad.o")
+
+ ("/home/hefesto/BM/" (22030 47231 45799 39000) "dependencias_para_clojure.org" "bmp-platform/" "bm-data/" "bmi-cloud/" "./" "../" "commons/" "catalogos/" "bm-gis/" "bmi-products/" "task/" "interpreters/" "planeacionSprint.org" "bm-api/" "bmi-library/")
+
+ ("/home/hefesto/src/graficas_por_computadora/" (22026 54057 967550 233000) "lesson5/" "Lesson03/" "./" "lesson3_2/" "getting-started_3/" "../" "sistema_solar/" "getting-started/" "getting-started_2/")
+
+ ("/home/hefesto/Documents/BM/" (22025 28582 134403 787000) "ChurchVsTuring/" "PLAN DE DESARROLLO INDIVIDUAL 2015.ods" "Terence Parr-The Definitive ANTLR 4 Reference, 2nd Edition-Pragmatic Bookshelf (2013).pdf" "./" "../" "Fijación de Objetivos 2015.ods" "Ljunglof2002a - Functional Programming and NLP.pdf" "objetivos.txt" "problemas_afin_clojure/" "CODIGO DE CONDUCTA 2015_Blumers.pdf" "metrica_objetivos_semanales.org")
+
+ ("/home/hefesto/src/windows_competition/dijkstra/src/dijkstra/" (22024 39139 6934 578000) "./" "../" "#core.clj#" "core.clj")
+
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/dateParser/" (22025 22410 790855 737000) "DateGrammarParser.java" "DateGrammarLexer.java" "DateGrammarVisitor.java" "DateGrammarLexer.tokens" "./" "../" "DateGrammar.g4" "DateGrammarBaseVisitor.java" "DateGrammar.tokens" "BailErrorStrategy.java" "updateGrammar.sh" "DateVisitor.java" "package-info.java" "DateParser.java")
+
+ ("/home/hefesto/BM/catalogos/opcion-multiple/razasPerros/" (22025 25738 37950 976000) "./" "../" "CatalogWithOptions.tsv" "MoreOptions.tsv")
+
+ ("/home/hefesto/BM/interpreters/tasks/" (22028 8265 270993 754000) "./" "../" "PosNegOpinionScale.js" "escalaFrecuencias.js" "escalaOpinonBipolar.js" "opcion_multiple.js")
+
+ ("/home/hefesto/BM/catalogos/escalas/escalaFrecuencia/" (22027 63509 746796 964000) "MoreOptionsFrec.tsv" "./" "../" "CatalogWithOptionsFrec.tsv")
+
+ ("/home/hefesto/bin/haskell-platform/" (22035 9399 297307 700000) "README" "notes/" "travis-setup.sh" "./" "../" ".gitignore" ".travis.yml" "hptool/" "LICENSE" "windows-platform.sh" "website/" ".git/" "platform.sh")
+
+ ("/home/hefesto/bin/cabal/" (22035 9333 83618 85000) "HACKING.md" "./" "../" "setup-dev.sh" "cabal-install/" "Cabal/" ".gitignore" ".travis.yml" "LICENSE" "stack.yaml" "ghc-packages" ".git/" ".arcconfig" "README.md")
+
+ ("/home/hefesto/bin/ghc-7.10.2/" (22035 6335 366364 27000) "driver/" "config.sub" "README" "config.guess" "libraries/" "mk/" "./" "ghc/" "rules/" "../" "inplace/" "packages" "configure" "INSTALL" "libffi/" "bindist.mk" "docs/" "includes/" "settings.in" "install-sh" "LICENSE" "rts/" "utils/" "Makefile" "ghc.mk" "compiler/")
+
+ ("/home/hefesto/BM/catalogos/escalas/" (22025 26103 165294 955000) "./" "../" "escalaOpinionBipolar/" "escalaOpinionPosNeg/" "escalaFrecuencia/")
+
+ ("/home/hefesto/BM/catalogos/" (22025 26001 70357 341000) "date-task/" "numerize-task/" "./" "escalas/" "../" "obsoletos-20150811/" "opcion-multiple/")
+
+ ("/home/hefesto/BM/catalogos/opcion-multiple/" (22025 24484 984517 725000) ".~lock.CatalogWithOptions.xls#" "./" "../" "razasPerros/" "egTelefono/")
+
+ ("/home/hefesto/src/windows_competition/dijkstra/src/" (22020 41753 375338 19000) "./" "dijkstra/" "../")
+
+ ("/home/hefesto/src/windows_competition/dijkstra/" (22020 41753 377338 3000) "./" "../" "resources/" "src/" ".gitignore" "test/" ".hgignore" "LICENSE" "project.clj" "doc/" "README.md")
+
+ ("/home/hefesto/src/windows_competition/" (22020 41753 371338 52000) "./" "dijkstra/" "../")
+
+ ("/home/hefesto/src/" (22020 41688 180817 159000) "v1.0.50.tar.gz" "./" "../" "emacs_aws/" "permute.el" "windows_competition/" "scudcloud-1.0.50/" "clj-antlr/" "graficas_por_computadora/")
+
+ ("/home/hefesto/Downloads/AntlrDate/" (22020 2728 0 0) "./" "../" "gramatica.g4" "ejemplosRaros.txt")
+
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/numerizer/" (22006 59968 320215 40000) "./" "../" "Numerizer.java" "Prefix.java" "NumerizerFactory.java" "package-info.java")
+
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/" (22012 18309 515609 128000) "ml/" "DefaultDataProviders.java" "dateParser/" "AbstractWorldStateProcessor.java" "action/" "data/" "./" "exceptions/" "../" "DefaultOperations.java" "util/" "DefaultTypes.java" "domain/" "DefaultFilters.java" "matrix/" "WorldStateProcessor.java" "sequence/" "filter/" "DataConstants.java" "Options.java" "DataProvider.java" "JsonAdapter.java" "DefaultActions.java" "operation/" "flow/" "api/" "numerizer/")
+
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/testDateParser/" (22012 18212 986654 747000) "DateGrammarParser.java" "DateGrammarLexer.java" "DateGrammarVisitor.java" "#updateGrammar.sh#" "DateGrammarLexer.tokens" "./" "org.eclipse.jdt.core.prefs" "../" "JavaBM.xml" "DateGrammar.g4" "DateGrammarBaseVisitor.java" ".#updateGrammar.sh" "DateGrammar.tokens" "BailErrorStrategy.java" "updateGrammar.sh" "DateVisitor.java" "package-info.java" "DateParser.java")
+
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/dateParser/test/" (22012 17519 555799 382000) "./" "../" "DateGrammarBaseVisitor.java")
+
+ ("/home/hefesto/BM/bmi-library/.settings/" (21920 12244 420781 813000) "./" "org.eclipse.jdt.core.prefs" "../" "org.eclipse.core.resources.prefs" "org.eclipse.m2e.core.prefs")
+
+ ("/home/hefesto/BM/commons/" (21935 46447 584603 508000) "bm_checks.xml" "./" "../" "JavaBM.xml" "BM-JavascriptFormatterProfile.xml" ".gitignore" "style-guide-bm/" "sun_checks.xml" "settings.xml" ".git/" "build-paths.example.properties" "defs.xml")
+
+ ("/home/hefesto/BM/bmi-library/" (22006 60346 473929 734000) "hs_err_pid11882.log" "logger-db.sql" "target/" "pom.xml" ".gitattributes" "./" "../" ".checkstyle" ".project" "resources/" "hs_err_pid13423.log" ".classpath" "src/" ".gitignore" ".settings/" "hs_err_pid31323.log" ".git/" "processors.doxygen" "hs_err_pid5879.log")
+
+ ("/home/hefesto/.thumbnails/" (21926 25444 626981 400000) "./" "../" "normal/")
+
+ ("/home/hefesto/BM/interpreters/dialogs/" (22003 6203 122093 511000) "DateFilter.js" "Numerizer.js" "./" "../")
+
+ ("/home/hefesto/BM/interpreters/" (21973 62452 689192 646000) "./" "../" "dialogs/" "tasks/")
+
+ ("/home/hefesto/BM/Interpreter_Tasks/" (22003 5888 890014 413000) "DateFilter.js" "Numerizer.js" "./" "../" "opcion_multiple.js")
+
+ ("/home/hefesto/BM/task/" (21918 43943 675953 500000) "bm_checks.xml" "./" "../" "JavaBM.xml" "BM-JavascriptFormatterProfile.xml" ".gitignore" "style-guide-bm/" "sun_checks.xml" "settings.xml" ".git/" "build-paths.example.properties" "defs.xml")
+
+ ("/home/hefesto/BM/Catalogos/" (22000 25700 202271 90000) "numbers_word_seg_catalog.tsv" "NumerizerTask/" "dateTask/" "./" "../" "faq_entity_classification.tsv" "numbers_spelling_catalog.tsv" "numbers_catalog.xls" "numbers_catalog.tsv" "numbers_spelling_catalog.xls" "wordsEn.tsv" "wordsEn_proyecto-spelling.tsv")
+
+ ("/home/hefesto/Documents/BM/problemas_afin_clojure/" (21991 4268 35118 200000) "problemas_afin_clojure.snm" "problemas_afin_clojure.out" "buffer.hs" "./" "../" "problemas_afin_clojure.log" "spanish.ldf" "problemas_afin_clojure.nav" "outline.org" "problemas_afin_clojure.tex" "problemas_afin_clojure.toc" "auto/" "problemas_afin_clojure.aux" "problemas_afin_clojure.pdf")
+
+ ("/home/hefesto/Documents/" (21979 25681 232530 163000) "./" "Problemas_Haskell/" "../" "Tesis/" "Obsoletos/" "Personales/" "BM/" "Templates/" "IngSoft/")
+
+ ("/home/hefesto/Downloads/GC Proyecto1/GC Proyecto1/" (21980 48709 0 0) "Program.cs" "Handler.cs" "./" "../" "App.config" "Form1.cs" "Properties/" "GC Proyecto1.csproj" "obj/" "bin/" "Form1.resx" "Form1.Designer.cs")
+
+ ("/home/hefesto/Downloads/GC Proyecto1/" (21980 47050 0 0) "./" "../" "GC Proyecto1.v11.suo" "GC Proyecto1/" "GC Proyecto1.sln")
+
+ ("/home/hefesto/test/" (21984 44314 943548 721000) "DateGrammarParser$Duple_NUM_NUMContext.class" "DateGrammarParser.java" "DateGrammarParser$Tern_year_month_DAYContext.class" "DateGrammarParser$Single_wdayContext.class" "DateGrammarParser$DateContext.class" "DateGrammarLexer.java" "DateGrammarParser$WeekD_wday_DAYContext.class" "DateGrammarVisitor.java" "DateGrammarParser$Single_timeContext.class" "DateGrammarParser$Time_hour_minuteContext.class" "DateGrammarParser$WTimeContext.class" "DateGrammarParser$MonthContext.class" "DateGrammarParser$MinuteContext.class" "DateGrammarLexer.class" "DateGrammarLexer.tokens" "DateGrammarParser.class" "./" "DateGrammarParser$SingleContext.class" "../" "DateGrammarParser$WeekDContext.class" "DateGrammarParser$WTime_weekD_timeContext.class" "DateGrammar.g4" "DateGrammarParser$WdayContext.class" "DateGrammarParser$Time_hour_minute_secondContext.class" "DateGrammarBaseVisitor.java" "DateGrammarParser$WTime_duple_timeContext.class" "DateGrammar.tokens" "DateGrammarParser$HourContext.class" "DateGrammarParser$TimeContext.class" "DateGrammarParser$WTime_tern_timeContext.class" "DateGrammarParser$WeekD_wday_dupleContext.class" "DateGrammarParser$WeekD_wday_ternContext.class" "DateGrammarParser$Single_NUMContext.class" "DateGrammarParser$Duple_NUM_monthContext.class" "DateGrammarParser$Tern_duple_yearContext.class" "DateGrammarParser$SecondContext.class" "DateGrammarParser$TernContext.class" "DateGrammarBaseVisitor.class" "DateGrammarParser$Duple_month_NUMContext.class" "update.sh" "DateGrammarVisitor.class" "DateGrammarParser$Single_monthContext.class" "DateGrammarParser$DupleContext.class")
+
+ ("/home/hefesto/BM/bmi-library/src/main/java/com/bm/bmi/DateParser/" (21983 26712 814457 323000) "DateGrammarParser.java" "DateGrammarLexer.java" "DateGrammarVisitor.java" "#DateGrammar.g4#" "DateGrammarLexer.tokens" "./" "../" "DateGrammar.g4" "DateGrammarBaseVisitor.java" "DateGrammar.tokens" "updateGrammar.sh" "DateVisitor.java" "package-info.java" "DateParser.java")
+
+ ("/home/hefesto/.emacs.d/elpa/zenburn-theme-20150701.2237/" (21925 5904 311608 755000) "zenburn-theme-autoloads.el" "./" "../" "zenburn-theme-pkg.el" "zenburn-theme-autoloads.el~" "zenburn-theme.el" "zenburn-theme-pkg.elc")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/resources/" (21966 8419 880003 300000) "./" "../" "DateExpr.g4")
+
+ ("/home/hefesto/dev/com.bm.bmi.aux/src/com/bm/bmi/" (21963 24261 654030 678000) "aux.clj" "./" "../")
+
+ ("/home/hefesto/.dotfiles/" (21964 59173 24941 991000) "./" "../" "makesymlinks.sh" ".git/" "README.md")
+
+ ("/home/hefesto/dev/com.domain.tiny/" (21964 47946 721013 0) "target/" ".nrepl-port" "project.clj~" "./" "../" "resources/" "src/" ".gitignore" "test/" ".hgignore" "LICENSE" "project.clj" "doc/" "README.md")
+
+ ("/home/hefesto/dev/com.domain.tiny/src/com/domain/" (21964 47867 402545 216000) "tiny.clj" "./" "../" "tiny.clj~")
+
+ ("/home/hefesto/dev/ejemplo.sargent/src/ejemplo/" (21964 47198 726601 670000) "./" "sargent.clj" "../")
+
+ ("/home/hefesto/dev/ejemplo.sargent/src/" (21964 47198 726601 670000) "ejemplo/" "./" "../")
+
+ ("/home/hefesto/dev/ejemplo.sargent/" (21964 47198 728601 682000) "./" "../" "resources/" "src/" ".gitignore" "test/" ".hgignore" "LICENSE" "project.clj" "doc/" "README.md")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/" (21964 43751 501066 776000) "com/" "./" "../")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/com/bm/bmi/" (21964 46464 61293 623000) "date.clj" "./" "../" "antlr/")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/com/bm/bmi/antlr/" (21964 43965 930243 806000) "DateExpr.tokens" "./" "DateExprVisitor.java" "DateExprLexer.java" "../" "DateExprBaseListener.java" "DateExprListener.java" "DateExprParser.java" "DateExprLexer.tokens" "DateExprBaseVisitor.java")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/com/bm/bmi/antlr/" (21964 41808 428663 921000) "DateExpr.tokens" "./" "DateExprVisitor.java" "DateExprLexer.java" "../" "DateExprBaseListener.java" "DateExprListener.java" "DateExprParser.java" "DateExprLexer.tokens" "DateExprBaseVisitor.java")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/com/bm/bmi/" (21964 41808 228662 853000) "./" "../" "antlr/")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/com/bm/" (21964 41808 228662 853000) "./" "bmi/" "../")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/com/" (21964 41808 228662 853000) "./" "../" "bm/")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/src/java/" (21964 41808 228662 853000) "com/" "./" "../")
+
+ ("/home/hefesto/BM/Catalogos/NumerizerTask/" (21963 27422 3573 199000) "./" "../" "numbers_spelling_catalog.tsv" "numbers_catalog.tsv")
+
+ ("/home/hefesto/BM/DateParser/com.bm.bmi.date/" (21962 52788 161403 889000) "target/" "pom.xml" ".nrepl-port" "./" "../" ".lein-repl-history" "resources/" "src/" ".gitignore" "test/" ".hgignore" "LICENSE" "project.clj" "doc/" "README.md")
+
+ ("/home/hefesto/dev/com.bm.bmi.aux/" (21962 32667 971494 950000) "target/" "./" "../" "resources/" "src/" ".gitignore" "test/" ".hgignore" "LICENSE" "project.clj" "doc/" "README.md")
+
+ ("/home/hefesto/Desktop/" (21917 45159 718062 811000) "./" "../")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

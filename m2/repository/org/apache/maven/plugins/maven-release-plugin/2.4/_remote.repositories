@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Oct 07 09:23:52 CDT 2015
+maven-release-plugin-2.4.jar>central=
+maven-release-plugin-2.4.pom>nexus=
+maven-release-plugin-2.4.jar>nexus=
+maven-release-plugin-2.4.pom>central=

@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Oct 07 09:31:49 CDT 2015
+scala-library-2.10.0.pom>nexus=
+scala-library-2.10.0.jar>central=
+scala-library-2.10.0.jar>nexus=
+scala-library-2.10.0.pom>central=

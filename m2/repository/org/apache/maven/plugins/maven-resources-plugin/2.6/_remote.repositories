@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Aug 05 15:24:53 CDT 2015
+maven-resources-plugin-2.6.jar>central=
+maven-resources-plugin-2.6.pom>nexus=
+maven-resources-plugin-2.6.jar>nexus=
+maven-resources-plugin-2.6.pom>central=

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ring</groupId>
+  <artifactId>ring-devel</artifactId>
+  <version>0.3.11</version>
+  <name>ring-devel</name>
+  <description>Ring development and debugging libraries.</description>
+  <url>http://github.com/mmcgrana/ring</url>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <resources>
+      <resource>
+        <directory>resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>test-resources</directory>
+      </testResource>
+    </testResources>
+  </build>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>http://repo1.maven.org/maven2</url>
+    </repository>
+    <repository>
+      <id>clojars</id>
+      <url>http://clojars.org/repo/</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>ring</groupId>
+      <artifactId>ring-core</artifactId>
+      <version>0.3.11</version>
+    </dependency>
+    <dependency>
+      <groupId>hiccup</groupId>
+      <artifactId>hiccup</artifactId>
+      <version>0.3.6</version>
+    </dependency>
+    <dependency>
+      <groupId>clj-stacktrace</groupId>
+      <artifactId>clj-stacktrace</artifactId>
+      <version>0.2.2</version>
+    </dependency>
+  </dependencies>
+</project>

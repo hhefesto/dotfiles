@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>clj-stacktrace</groupId>
+  <artifactId>clj-stacktrace</artifactId>
+  <version>0.2.2</version>
+  <name>clj-stacktrace</name>
+  <description>More readable stacktraces in Clojure programs.</description>
+  <url>http://github.com/mmcgrana/clj-stacktrace</url>
+  <scm>
+    <tag>6fd01866c1d7e3bf8d59ef2d7f05aef396d0b811</tag>
+  </scm>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <resources>
+      <resource>
+        <directory>resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>test-resources</directory>
+      </testResource>
+    </testResources>
+  </build>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>http://repo1.maven.org/maven2</url>
+    </repository>
+    <repository>
+      <id>clojure</id>
+      <url>http://build.clojure.org/releases</url>
+    </repository>
+    <repository>
+      <id>clojure-snapshots</id>
+      <url>http://build.clojure.org/snapshots</url>
+    </repository>
+    <repository>
+      <id>clojars</id>
+      <url>http://clojars.org/repo/</url>
+    </repository>
+  </repositories>
+</project>

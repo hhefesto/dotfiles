@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Oct 07 09:23:53 CDT 2015
+cargo-maven2-plugin-1.4.8.jar>central=
+cargo-maven2-plugin-1.4.8.pom>central=
+cargo-maven2-plugin-1.4.8.pom>nexus=
+cargo-maven2-plugin-1.4.8.jar>nexus=

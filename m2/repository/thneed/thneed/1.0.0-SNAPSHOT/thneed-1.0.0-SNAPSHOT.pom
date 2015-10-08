@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>thneed</groupId>
+  <artifactId>thneed</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>thneed</name>
+  <description>FIXME: write description</description>
+  <scm>
+    <connection>scm:git:git://github.com/fogus/thneed.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/fogus/thneed.git</developerConnection>
+    <tag>0e23ea2b770eebc8c64f4f9f696d1d047fd5049d</tag>
+    <url>https://github.com/fogus/thneed</url>
+  </scm>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <resources>
+      <resource>
+        <directory>resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>test-resources</directory>
+      </testResource>
+    </testResources>
+  </build>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>http://repo1.maven.org/maven2</url>
+    </repository>
+    <repository>
+      <id>clojars</id>
+      <url>http://clojars.org/repo/</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>swank-clojure</groupId>
+      <artifactId>swank-clojure</artifactId>
+      <version>1.4.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.3.0</version>
+    </dependency>
+  </dependencies>
+</project>
