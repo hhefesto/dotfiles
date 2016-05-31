@@ -14,6 +14,8 @@ files="~/.zshrc ~/.emacs.d/init.el ~/.xmobarrc ~/.xmonad/xmonad.hs ~/.xsession" 
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
+mkdir -p ~/dev
+mkdir -p $dir
 mkdir -p $olddir
 echo "done"
 
@@ -22,11 +24,13 @@ echo -n "Changing to the $dir directory ..."
 cd $dir
 echo "done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv $file $olddir
-done
+echo "Copying any existing dotfiles from ~ to $olddir"
+mv ~/.zshrc $olddir
+mv ~/.emacs.d/init.el $olddir
+mv ~/.xmobarrc $olddir
+mv ~/.xmonad/xmonad.hs $olddir
+mv ~/.xsession $olddir
+echo "done (no error should have been displayed)"
 
 echo "Creating symlink to $file in home directory."
 ln -s $dir/zshrc ~/.zshrc
@@ -34,6 +38,7 @@ ln -s $dir/init.el ~/.emacs.d/init.el
 ln -s $dir/xmobarrc ~/.xmobarrc
 ln -s $dir/xmonad.hs ~/.xmonad/xmonad.hs
 ln -s $dir/xsession ~/.xsession
+echo "done (no error should have been displayed)"
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
@@ -67,4 +72,4 @@ else
 fi
 }
 
-install_zsh
+#install_zsh

@@ -5,7 +5,7 @@ export ZSH=/home/hefesto/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="zeta"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git dnf sudo colorize extract history postgres)
 
 # User configuration
 
@@ -82,17 +82,31 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Java
 export JAVA_HOME=/usr/java/jdk1.8.0_60
-
-export PATH="~/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/hefesto/.local/bin:/home/hefesto/bin:/home/hefesto/bin/arduino"
-
 export CLASSPATH=".:/usr/local/lib/:/usr/local/lib/antlr-4.0-complete.jar:$CLASSPATH"
 
+# Antlr4
 alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
+# Path
+export PATH="~/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/hefesto/.local/bin:/home/hefesto/bin:/home/hefesto/bin/arduino:/usr/pgsql-9.4/bin"
+
+# ssh-keys
+ssh-add ~/.ssh/id_rsa_github
+ssh-add ~/.ssh/communis-front-key.pem
+ssh-add ~/.ssh/id_rsa_rdataa.pem
+
+# Emacs
 if [ -n "$INSIDE_EMACS" ]; then
     export ZSH_THEME="rawsyntax"
 else
     export ZSH_THEME="robbyrussell"
 fi
+
+# Clear
+clear
+
+# Notas
+
