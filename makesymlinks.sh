@@ -6,9 +6,9 @@
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"    # list of files/folders to symlink in homedir
+dir=~/dev/dotfiles                    # dotfiles directory
+olddir=~/dev/dotfiles/dotfiles_old             # old dotfiles backup directory
+files="~/.zshrc ~/.emacs.d/init.el ~/.xmobarrc ~/.xmonad/xmonad.hs ~/.xsession"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -25,10 +25,15 @@ echo "done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    mv $file $olddir
 done
+
+echo "Creating symlink to $file in home directory."
+ln -s $dir/zshrc ~/.zshrc
+ln -s $dir/init.el ~/.emacs.d/init.el
+ln -s $dir/xmobarrc ~/.xmobarrc
+ln -s $dir/xmonad.hs ~/.xmonad/xmonad.hs
+ln -s $dir/xsession ~/.xsession
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
