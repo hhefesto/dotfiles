@@ -1,1 +1,0 @@
-/home/hefesto/.emacs.d
