@@ -50,10 +50,6 @@
 (ido-mode t)
 (setq ido-enable-flex-matching t
       ido-use-virtual-buffers t)
-;;(require 'autopair)
-
-(require 'auto-complete-config)
-(ac-config-default)
 
 (defun untabify-buffer ()
   (interactive)
@@ -231,37 +227,6 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 (setq auto-save-file-name-transforms
       `((".*" ,"~/temp/" t)))
 
-;; ;;--------irc--------
-;; (require 'erc)
-
-;; ;; check channels
-;; (erc-track-mode t)
-;; (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
-
-;;                                  "324" "329" "332" "333" "353" "477"))
-;; ;; don't show any of this
-;; (setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
-
-;; --------antlr grammar to antlr-mode--------
-(add-to-list 'auto-mode-alist '("\\.g4\\'" . antlr-mode))
-
-;;--------Clojure--------
-;; clojure files to CIDER mode.
-(add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
-
-(add-to-list 'load-path "/home/hefesto/.emacs.d/elpa/clojure-mode-extra-font-locking-20150110.505/")
-(load "/home/hefesto/.emacs.d/elpa/clojure-mode-extra-font-locking-20150110.505/clojure-mode-extra-font-locking")
-(require 'clojure-mode)
-;;(require 'rainbow-delimiters-mode)
-(defun turn-on-clojure-minor-modes ()
-  (paredit-mode 1)
-  (rainbow-delimiters-mode 1)
-  (cider-mode 1))
-  ;;(clojure-mode-extra-font-locking 1))
-(add-hook 'clojure-mode-hook 'turn-on-clojure-minor-modes)
-
-(add-hook 'cider-repl-mode-hook #'paredit-mode)
-(add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
 
 ;;--------C--------
 (require 'cc-mode)
@@ -292,8 +257,4 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 
 (if (not (get-buffer "*terminal<1>*"))
     (multi-term))
-
-
-
-
 
