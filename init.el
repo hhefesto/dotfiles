@@ -14,6 +14,16 @@
 	       '("tromey" . "http://tromey.com/elpa/") t)
   (package-initialize))
 
+; list the packages you want
+(setq package-list '(zenburn-theme yasnippet multi-term))
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
 (setq package-archive-enable-alist '(("melpa" deft magit)))
 
 (setq inhibit-startup-message t)
