@@ -15,6 +15,8 @@ main = do
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
+        , normalBorderColor  = "#4a4a4a"
+        , focusedBorderColor = "#7fff00"
         } `additionalKeysP`
         [ ("C-<Print>", spawn "sleep 0.1; scrot -s")
         , ("<Print>", spawn "scrot")

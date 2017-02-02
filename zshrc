@@ -1,3 +1,4 @@
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/hefesto/.oh-my-zsh
 
@@ -85,6 +86,8 @@ source $ZSH/oh-my-zsh.sh
 # Java
 export JAVA_HOME=/usr/java/jdk1.8.0_60
 export CLASSPATH=".:/usr/local/lib/:/usr/local/lib/antlr-4.0-complete.jar:$CLASSPATH"
+export AWT_TOOLKIT=MToolkit
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Antlr4
 alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
@@ -110,3 +113,6 @@ clear
 
 # Notas
 
+
+export NVM_DIR="/home/hefesto/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
