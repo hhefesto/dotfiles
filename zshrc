@@ -1,6 +1,6 @@
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/hefesto/.oh-my-zsh
+export ZSH=/home/$USER/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -94,7 +94,7 @@ alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 # Path
-export PATH="~/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/hefesto/.local/bin:/home/hefesto/bin:/home/hefesto/bin/arduino:/usr/pgsql-9.4/bin"
+export PATH="~/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/$USER/.local/bin:/home/$USER/bin:/home/$USER/bin/arduino:/usr/pgsql-9.4/bin"
 
 # ssh-keys
 ssh-add ~/.ssh/id_rsa_github
@@ -114,5 +114,5 @@ clear
 # Notas
 
 
-export NVM_DIR="/home/hefesto/.nvm"
+export NVM_DIR="/home/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

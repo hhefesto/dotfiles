@@ -26,4 +26,6 @@ if [ -x /usr/bin/gnome-power-manager ] ; then
    gnome-power-manager &
 fi
 
+export PRUEBA="Hola, Prueba."
+
 exec xmonad
