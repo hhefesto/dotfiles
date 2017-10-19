@@ -1,6 +1,23 @@
+;; hhefesto
+;; hhefest@rdataa.com
+;; Copyright: share and do what you wish
 
-;;(let ((default-directory "~/.emacs.d/Git-pluggins/"))
-;;  (normal-top-level-add-subdirs-to-load-path))
+;; For some wierd reason multi-term works only after I delete it in list-packages and re-install.
+;; I just changed the location of custom-set-variables, so maybe the problem is already resolved.
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-startup-truncated nil)
+ '(package-selected-packages (quote (company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 (setenv "PATH" (concat "/usr/local/bin:/opt/local/bin:/usr/bin:/bin" (getenv "PATH")))
 (require 'cl)
@@ -31,11 +48,9 @@
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
-
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)
 
@@ -267,20 +282,6 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 
 (if (not (get-buffer "*terminal<1>*"))
     (multi-term))
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-startup-truncated nil)
- '(package-selected-packages (quote (company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 
 ;;--------Typescript--------
