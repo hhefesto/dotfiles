@@ -108,11 +108,9 @@ else
     export ZSH_THEME="robbyrussell"
 fi
 
-# Clear
-clear
-
-# Notas
-
-
+# NVM
 export NVM_DIR="/home/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Clear
+clear
