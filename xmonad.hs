@@ -18,7 +18,7 @@ main = do
         , normalBorderColor  = "#4a4a4a"
         , focusedBorderColor = "#7fff00"
         } `additionalKeysP`
-        [ ("C-<Print>", spawn "sleep 0.1; scrot -s")
+        [ ("C-<Print>", spawn "sleep 0.1; scrot -s") --Esto no funciona. Tampoco sé para qué es.
         , ("<Print>", spawn "scrot")
 --        , ("M-j", spawn "xdotool key Down")
 --        , ("M-k", spawn "xdotool key Up")

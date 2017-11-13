@@ -1,6 +1,23 @@
+;; hhefesto
+;; hhefest@rdataa.com
+;; Copyright: share and do what you wish
 
-;;(let ((default-directory "~/.emacs.d/Git-pluggins/"))
-;;  (normal-top-level-add-subdirs-to-load-path))
+;; For some wierd reason multi-term works only after I delete it in list-packages and re-install.
+;; I just changed the location of custom-set-variables, so maybe the problem is already resolved.
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-startup-truncated nil)
+ '(package-selected-packages (quote (company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 (setenv "PATH" (concat "/usr/local/bin:/opt/local/bin:/usr/bin:/bin" (getenv "PATH")))
 (require 'cl)
@@ -11,12 +28,12 @@
    'package-archives
    '("melpa" . "http://melpa.org/packages/") t)
   (add-to-list 'package-archives
-	       '("tromey" . "http://tromey.com/elpa/") t)
+               '("tromey" . "http://tromey.com/elpa/") t)
   (package-initialize))
 
 ; list the packages you want
-(setq package-list '(zenburn-theme yasnippet multi-term))
-; fetch the list of packages available 
+(setq package-list '(zenburn-theme yasnippet multi-term haskell-mode))
+; fetch the list of packages available
 (unless package-archive-contents
   (package-refresh-contents))
 ; install the missing packages
@@ -31,11 +48,9 @@
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
-
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)
 
@@ -133,7 +148,7 @@
       (insert txt)
       (org-table-convert-region 1 (buffer-end 1) arg)
       (setq-local parent-file file)
-      (cond 
+      (cond
        ((equal arg '(4)) (setq-local export-func "orgtbl-to-csv"))
        ((equal arg '(16)) (setq-local export-func "orgtbl-to-tsv"))
        (t (setq-local export-func "orgtbl-to-tsv")))
@@ -145,7 +160,7 @@
 (global-set-key (kbd "C-c |") 'my-edit-dsv-as-orgtbl)
 
 
-; --------zsh--------
+                                        ; --------zsh--------
 (setq multi-term-program "/bin/zsh")
 
 (add-hook 'term-mode-hook
@@ -188,9 +203,9 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
           (lambda ()
             (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
             (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))
-	    (define-key term-raw-map (kbd "C-y") 'term-paste)
-	    (yas-minor-mode 0)
-	    (message "%s" "This is in term mode and hook enabled.")))
+            (define-key term-raw-map (kbd "C-y") 'term-paste)
+            (yas-minor-mode 0)
+            (message "%s" "This is in term mode and hook enabled.")))
 
 ;; ;; --------eclim--------
 ;; (require 'eclim)
@@ -211,23 +226,23 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 (defun my-non-fullscreen ()
   (interactive)
   (if (fboundp 'w32-send-sys-command)
-	  ;; WM_SYSCOMMAND restore #xf120
-	  (w32-send-sys-command 61728)
-	(progn (set-frame-parameter nil 'width 82)
-		   (set-frame-parameter nil 'fullscreen 'fullheight))))
+      ;; WM_SYSCOMMAND restore #xf120
+      (w32-send-sys-command 61728)
+    (progn (set-frame-parameter nil 'width 82)
+           (set-frame-parameter nil 'fullscreen 'fullheight))))
 
 (defun my-fullscreen ()
   (interactive)
   (if (fboundp 'w32-send-sys-command)
-	  ;; WM_SYSCOMMAND maximaze #xf030
-	  (w32-send-sys-command 61488)
-	(set-frame-parameter nil 'fullscreen 'fullboth)))
+      ;; WM_SYSCOMMAND maximaze #xf030
+      (w32-send-sys-command 61488)
+    (set-frame-parameter nil 'fullscreen 'fullboth)))
 
 (defun my-toggle-fullscreen ()
   (interactive)
   (setq my-fullscreen-p (not my-fullscreen-p))
   (if my-fullscreen-p
-	  (my-non-fullscreen)
+      (my-non-fullscreen)
     (my-fullscreen)))
 
 (my-fullscreen)
@@ -243,10 +258,10 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 ;;(setq c-default-style "linux"
 ;;      c-basic-offset 4)
 (setq-default c-indent-tabs-mode t     ; Pressing TAB should cause indentation
-	      c-indent-level 4         ; A TAB is equivilent to four spaces
-	      c-argdecl-indent 0       ; Do not indent argument decl's extra
-	      c-tab-always-indent t
-	      backward-delete-function nil) ; DO NOT expand tabs when deleting
+              c-indent-level 4         ; A TAB is equivilent to four spaces
+              c-argdecl-indent 0       ; Do not indent argument decl's extra
+              c-tab-always-indent t
+              backward-delete-function nil) ; DO NOT expand tabs when deleting
 ;;(c-add-style "my-c-style" '((c-continued-statement-offset 4))) ; If a statement continues on the next line, indent the continuation by 4
 (defun my-c-mode-hook ()
   (c-set-style "linux")
@@ -259,7 +274,7 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 (add-hook 'c++-mode-hook 'my-c-mode-hook)
 
-;--------Miscellaneous--------
+                                        ;--------Miscellaneous--------
 (require 'yasnippet)
 (add-to-list 'yas-snippet-dirs "~/.emacs.d/yasnippet-snippets")
 
@@ -268,39 +283,24 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 (if (not (get-buffer "*terminal<1>*"))
     (multi-term))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
 
 ;;--------Typescript--------
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  ;; company is an optional dependency. You have to
-  ;; install it separately via package-install
-  ;; `M-x package-install [ret] company`
-  (company-mode +1))
+;;defun(defun setup-tide-mode ()
+;; (interactive)
+;;  (tide-setup)
+;;  (flycheck-mode +1)
+;;  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+;;  (eldoc-mode +1)
+;;  (tide-hl-identifier-mode +1)
+;;  ;; company is an optional dependency. You have to
+;;  ;; install it separately via package-install
+;;  ;; `M-x package-install [ret] company`
+;;  (company-mode +1))
 
-;; aligns annotation to the right hand side
-(setq company-tooltip-align-annotations t)
+;;;; aligns annotation to the right hand side
+;;(setq company-tooltip-align-annotations t)
 
-;; formats the buffer before saving
-(add-hook 'before-save-hook 'tide-format-before-save)
+;;;; formats the buffer before saving
+;;(add-hook 'before-save-hook 'tide-format-before-save)
 
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
+;;(add-hook 'typescript-mode-hook #'setup-tide-mode)
