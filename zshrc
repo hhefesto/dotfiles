@@ -95,6 +95,7 @@ alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 # Path
 export PATH="~/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/hefesto/.local/bin:/home/hefesto/bin:/home/hefesto/bin/arduino:/usr/pgsql-9.4/bin"
+export PATH=/root/.local/bin:$PATH
 
 # ssh-keys
 ssh-add ~/.ssh/id_rsa_github
@@ -111,8 +112,11 @@ fi
 # Clear
 clear
 
-# Notas
+# Notes
 
-
+# Node
 export NVM_DIR="/home/hefesto/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
