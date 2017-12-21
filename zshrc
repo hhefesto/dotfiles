@@ -98,9 +98,9 @@ export PATH="~/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/l
 export PATH=/root/.local/bin:$PATH
 
 # ssh-keys
-ssh-add ~/.ssh/id_rsa_github
-ssh-add ~/.ssh/communis-front-key.pem
-ssh-add ~/.ssh/id_rsa_rdataa.pem
+# ssh-add ~/.ssh/id_rsa_github
+# ssh-add ~/.ssh/communis-front-key.pem
+# ssh-add ~/.ssh/id_rsa_rdataa.pem
 
 # Emacs
 if [ -n "$INSIDE_EMACS" ]; then
@@ -113,6 +113,9 @@ fi
 export NVM_DIR="/home/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Dropbox
+dropbox start
 
 # Clear
 clear
