@@ -13,7 +13,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
+    (gruber-darker-theme smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
  '(safe-local-variable-values
    (quote
     ((hamlet/basic-offset . 4)
@@ -38,12 +38,12 @@
                '("tromey" . "http://tromey.com/elpa/") t)
   (package-initialize))
 
-; list the packages you want
-(setq package-list '(zenburn-theme yasnippet multi-term haskell-mode smex))
-; fetch the list of packages available
+;; list the packages you want
+(setq package-list '(gruber-darker-theme yasnippet multi-term haskell-mode smex))
+;; fetch the list of packages available
 (unless package-archive-contents
   (package-refresh-contents))
-; install the missing packages
+;; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
@@ -63,7 +63,7 @@
 
 (global-linum-mode 1)
 
-(load-theme 'zenburn t)
+(load-theme 'gruber-darker t)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -83,7 +83,6 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
 
 (ido-mode t)
 (setq ido-enable-flex-matching t
