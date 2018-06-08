@@ -13,7 +13,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
+    (smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
  '(safe-local-variable-values
    (quote
     ((hamlet/basic-offset . 4)
@@ -39,7 +39,7 @@
   (package-initialize))
 
 ; list the packages you want
-(setq package-list '(zenburn-theme yasnippet multi-term haskell-mode))
+(setq package-list '(zenburn-theme yasnippet multi-term haskell-mode smex))
 ; fetch the list of packages available
 (unless package-archive-contents
   (package-refresh-contents))
@@ -78,6 +78,12 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (show-paren-mode t)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 
 (ido-mode t)
 (setq ido-enable-flex-matching t
@@ -287,8 +293,8 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 
 (yas-global-mode 1)
 
-(if (not (get-buffer "*terminal<1>*"))
-    (multi-term))
+;;(if (not (get-buffer "*terminal<1>*"))
+;;    (multi-term))
 
 
 ;;--------Typescript--------
