@@ -95,7 +95,9 @@ alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 # Path
 export PATH="~/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/$USER/.local/bin:/home/$USER/bin:/home/$USER/bin/arduino:/usr/pgsql-9.4/bin"
+# stack executables:
 export PATH=/root/.local/bin:$PATH
+export PATH=/home/hhefesto/.local/bin:$PATH
 
 # ssh-keys
 # ssh-add ~/.ssh/id_rsa_github
