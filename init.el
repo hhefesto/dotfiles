@@ -50,6 +50,9 @@
 
 (setq package-archive-enable-alist '(("melpa" deft magit)))
 
+(if (eq system-type 'windows-nt)
+    (set-face-attribute 'default (selected-frame) :height 132))
+
 (setq inhibit-startup-message t)
 
 (setq TeX-auto-save t)
