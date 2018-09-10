@@ -13,7 +13,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (gruber-darker-theme smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
+    (hasky-stack intero gruber-darker-theme smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
  '(safe-local-variable-values
    (quote
     ((hamlet/basic-offset . 4)
@@ -34,12 +34,13 @@
   (add-to-list
    'package-archives
    '("melpa" . "http://melpa.org/packages/") t)
-  (add-to-list 'package-archives
-               '("tromey" . "http://tromey.com/elpa/") t)
-  (package-initialize))
+  (package-initialize)
+  (package-refresh-contents))
+
+(setq package-archive-enable-alist '(("melpa" deft magit)))
 
 ;; list the packages you want
-(setq package-list '(gruber-darker-theme yasnippet multi-term haskell-mode smex))
+(setq package-list '(gruber-darker-theme yasnippet multi-term haskell-mode smex intero))
 ;; fetch the list of packages available
 (unless package-archive-contents
   (package-refresh-contents))
@@ -48,9 +49,11 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-(setq package-archive-enable-alist '(("melpa" deft magit)))
+(column-number-mode 1)
 
 (setq inhibit-startup-message t)
+
+(setq-default cursor-type 'bar) 
 
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
@@ -316,3 +319,8 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 ;;(add-hook 'before-save-hook 'tide-format-before-save)
 
 ;;(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+;;-----------Haskell----------------
+
+(add-hook 'haskell-mode-hook 'intero-mode)
+(add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)

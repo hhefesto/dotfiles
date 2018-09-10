@@ -117,7 +117,10 @@ export NVM_DIR="/home/$USER/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Dropbox
-dropbox start
+if pgrep -x "dropbox" > /dev/null
+then
+    dropbox start
+fi
 
 # Clear
 clear
