@@ -51,6 +51,9 @@
 
 (column-number-mode 1)
 
+(if (eq system-type 'windows-nt)
+    (set-face-attribute 'default (selected-frame) :height 132))
+
 (setq inhibit-startup-message t)
 
 (setq-default cursor-type 'bar) 
