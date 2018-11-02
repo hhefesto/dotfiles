@@ -98,6 +98,8 @@ export PATH="~/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/l
 # stack executables:
 export PATH=/root/.local/bin:$PATH
 export PATH=/home/hhefesto/.local/bin:$PATH
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # ssh-keys
 # ssh-add ~/.ssh/id_rsa_github
@@ -117,8 +119,10 @@ export NVM_DIR="/home/$USER/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Dropbox
-if pgrep -x "dropbox" > /dev/null
-then
+if pgrep -x 'dropbox'; then
+    echo "Dropbox already running"
+else
+    echo "Starting Dropbox from zshrc"
     dropbox start
 fi
 
