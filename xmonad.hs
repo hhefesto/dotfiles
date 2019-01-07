@@ -28,4 +28,3 @@ main = do
 --        , ("M-h", spawn "xdotool key Left")
         ]
 --        , ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
-

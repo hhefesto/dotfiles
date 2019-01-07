@@ -94,7 +94,7 @@ alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 # Path
-export PATH="/home/$USER/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/$USER/.local/bin:/home/$USER/bin:/home/$USER/bin/arduino:/usr/pgsql-9.4/bin:/home/$USER/.nix-profile/bin"
+export PATH="/home/$USER/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/$USER/.local/bin:/home/$USER/bin:/home/$USER/bin/arduino:/usr/pgsql-9.4/bin"
 
 # stack executables:
 export PATH=/root/.local/bin:$PATH
@@ -128,5 +128,10 @@ else
     dropbox start
 fi
 
+# My aliases 
+# alias scrot='scrot ~/Pictures/Screenshots/%b%d::%H_%M_%S.png' # this is done in xmonad.hs
+
+
 # Clear
 clear
+
