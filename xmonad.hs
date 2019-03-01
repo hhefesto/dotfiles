@@ -1,24 +1,45 @@
+{-# LANGUAGE ScopedTypeVariables #-}
+
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
-import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.Run(spawnPipe, unsafeSpawn)
 import XMonad.Util.EZConfig(additionalKeysP)
 import System.IO
+import XMonad.Layout.IndependentScreens
+import XMonad.Actions.WindowGo (runOrRaise)
+
+myStartupHook :: X ()
+myStartupHook = do
+  unsafeSpawn myTerminal
+  runOrRaise "emacs" (className =? "Emacs")
+  runOrRaise "google-chrome-stable" (className =? "Google-chrome")
+  runOrRaise "nautilus" (className =? "Nautilus")
+  unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
+
+myModMask            = mod4Mask                        -- Sets modkey to super/windows key
+myTerminal           = "tabbed -r 2 st -w '' -e tmux"  -- Sets default terminal
+myTextEditor         = "emacs"                         -- Sets default text editor
+myBorderWidth        = 2                               -- Sets border width for windows
+myNormalBorderColor  = "#4a4a4a"
+myFocusedBorderColor = "#7fff00"
 
 main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ defaultConfig
-        { modMask = mod4Mask     -- Rebind Mod to the Windows key
-        , manageHook = manageDocks <+> manageHook defaultConfig
+        { manageHook = manageDocks <+> manageHook defaultConfig
         , layoutHook = avoidStruts  $  layoutHook defaultConfig
         , handleEventHook = handleEventHook defaultConfig <+> docksEventHook
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "darkgreen" "" . shorten 20
                         }
-        , normalBorderColor  = "#4a4a4a"
-        , focusedBorderColor = "#7fff00"
-        , terminal = "gnome-terminal"
+        , startupHook        = myStartupHook
+        , modMask            = myModMask     -- Rebind Mod to the Windows key
+        , borderWidth        = myBorderWidth
+        , normalBorderColor  = myNormalBorderColor
+        , focusedBorderColor = myFocusedBorderColor
+        , terminal           = myTerminal
         } `additionalKeysP`
         [ ("<Print>", spawn "scrot")
 --        , ("C-<Print>", spawn "sleep 0.1; scrot -s") --Esto no funciona. Tampoco sé para qué es.

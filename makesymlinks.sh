@@ -8,7 +8,7 @@
 
 dir=~/dev/dotfiles                    # dotfiles directory
 olddir=~/dev/dotfiles/dotfiles_old             # old dotfiles backup directory
-files="~/.zshrc ~/.emacs.d/init.el ~/.xmobarrc ~/.xmonad/xmonad.hs ~/.xsession"    # list of files/folders to symlink in homedir
+files="~/.zshrc ~/.emacs.d/init.el ~/.xmobarrc ~/.xmonad/xmonad.hs ~/.xsession ~/.Xresources"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -32,6 +32,7 @@ mv ~/.emacs.d/init.el $olddir
 mv ~/.xmobarrc $olddir
 mv ~/.xmonad/xmonad.hs $olddir
 mv ~/.xsession $olddir
+mv ~/.Xresources $olddir
 echo "done (no error should have been displayed)"
 
 echo "Creating symlink to $file in home directory."
@@ -40,4 +41,5 @@ ln -s $dir/init.el ~/.emacs.d/init.el
 ln -s $dir/xmobarrc ~/.xmobarrc
 ln -s $dir/xmonad.hs ~/.xmonad/xmonad.hs
 ln -s $dir/xsession ~/.xsession
+ln -s $dir/Xresources ~/.Xresources
 echo "done (no error should have been displayed)"

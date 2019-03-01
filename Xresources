@@ -1,0 +1,9 @@
+URxvt.perl-ext-common: default, matcher, tabbed
+URxvt.scrollBar: false
+URxvt.borderless: false
+URxvt*dynamicColors: on
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
