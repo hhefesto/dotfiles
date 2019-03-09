@@ -125,12 +125,21 @@ if pgrep -x 'dropbox'; then
     echo "Dropbox already running"
 else
     echo "Starting Dropbox from zshrc"
-    dropbox start
+    dropbox start &
 fi
 
-# My aliases 
-# alias scrot='scrot ~/Pictures/Screenshots/%b%d::%H_%M_%S.png' # this is done in xmonad.hs
+# Ranger
+if pgrep -x 'ranger'; then
+    echo "Ranger already running"
+else
+    echo "Starting Ranger from zshrc"
+    clear
+    ranger
+fi
 
+# My aliases
+alias ls='lsd'
+# alias scrot='scrot ~/Pictures/Screenshots/%b%d::%H_%M_%S.png' # this is done in xmonad.hs
 
 # Clear
 clear

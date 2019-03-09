@@ -11,10 +11,10 @@ import XMonad.Actions.WindowGo (runOrRaise)
 
 myStartupHook :: X ()
 myStartupHook = do
+  unsafeSpawn myTerminal -- This will become ranger after .zshrc runs
   unsafeSpawn myTerminal
   runOrRaise "emacs" (className =? "Emacs")
   runOrRaise "google-chrome-stable" (className =? "Google-chrome")
-  runOrRaise "nautilus" (className =? "Nautilus")
   unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 myModMask            = mod4Mask                        -- Sets modkey to super/windows key
