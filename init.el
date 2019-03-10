@@ -13,7 +13,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (magit manage-minor-mode hasky-stack intero gruber-darker-theme smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
+    (ranger magit manage-minor-mode hasky-stack intero gruber-darker-theme smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
  '(safe-local-variable-values
    (quote
     ((hamlet/basic-offset . 4)
