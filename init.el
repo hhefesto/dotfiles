@@ -329,3 +329,12 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 
 (add-hook 'haskell-mode-hook 'intero-mode)
 (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
+(setq intero-blacklist '("~/dev/YesodEmailAuthBookExample/src/Main.hs"))
+(add-hook 'haskell-mode-hook 'intero-mode-blacklist) ;; I added this because setq intero-blacklist isn't working properly
+                                                     ;; The workaround is (I think): C-h v intero-blacklist and then
+                                                     ;; just close the help buffer
+
+;;-----------Magit----------------
+;; Getting startued tutorial at:
+;; https://magit.vc/manual/magit/Getting-Started.html
+(global-set-key (kbd "C-x g") 'magit-status)
