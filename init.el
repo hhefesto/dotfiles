@@ -327,12 +327,10 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 
 ;;-----------Haskell----------------
 
-(add-hook 'haskell-mode-hook 'intero-mode)
+(add-hook 'haskell-mode-hook 'intero-global-mode)
 (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
-(setq intero-blacklist '("~/dev/YesodEmailAuthBookExample/src/Main.hs"))
+(setq intero-blacklist '("/home/hhefesto/dev/YesodEmailAuthBookExample/src/Main.hs"))
 (add-hook 'haskell-mode-hook 'intero-mode-blacklist) ;; I added this because setq intero-blacklist isn't working properly
-                                                     ;; The workaround is (I think): C-h v intero-blacklist and then
-                                                     ;; just close the help buffer
 
 ;;-----------Magit----------------
 ;; Getting startued tutorial at:
