@@ -11,8 +11,7 @@ import XMonad.Actions.WindowGo (runOrRaise)
 
 myStartupHook :: X ()
 myStartupHook = do
-  unsafeSpawn myTerminal -- This will become ranger after .zshrc runs
-  unsafeSpawn myTerminal
+  unsafeSpawn myTerminal -- I have to manualy remove this terminal because Dropbox starts there and won't stop printing msgs
   runOrRaise "emacs" (className =? "Emacs")
   runOrRaise "google-chrome-stable" (className =? "Google-chrome")
   unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
