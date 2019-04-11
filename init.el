@@ -13,7 +13,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (ranger magit manage-minor-mode hasky-stack intero gruber-darker-theme smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
+    (nix-mode use-package ranger magit manage-minor-mode hasky-stack intero gruber-darker-theme smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
  '(safe-local-variable-values
    (quote
     ((hamlet/basic-offset . 4)
@@ -56,7 +56,7 @@
 
 (setq inhibit-startup-message t)
 
-(setq-default cursor-type 'bar) 
+(setq-default cursor-type 'bar)
 
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
@@ -327,12 +327,131 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 
 ;;-----------Haskell----------------
 
-(add-hook 'haskell-mode-hook 'intero-global-mode)
+;; (add-hook 'haskell-mode-hook 'intero-mode)
+;; (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
+;; (setq intero-blacklist '("/home/hhefesto/dev/YesodEmailAuthBookExample/src/Main.hs"))
+;; (add-hook 'haskell-mode-hook 'intero-mode-blacklist) ;; I added this because setq intero-blacklist isn't working properly
+
+(intero-global-mode 1)
 (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
-(setq intero-blacklist '("/home/hhefesto/dev/YesodEmailAuthBookExample/src/Main.hs"))
-(add-hook 'haskell-mode-hook 'intero-mode-blacklist) ;; I added this because setq intero-blacklist isn't working properly
+(setq intero-blacklist '("/home/hhefesto/dev/YesodEmailAuthBookExample/"))
 
 ;;-----------Magit----------------
 ;; Getting startued tutorial at:
 ;; https://magit.vc/manual/magit/Getting-Started.html
 (global-set-key (kbd "C-x g") 'magit-status)
+
+
+;;           IRC
+;; source: https://github.com/jwiegley/dot-emacs/blob/master/init.el#L1369 https://github.com/jwiegley/dot-emacs/blob/0e07f471036d6f3ec4f3cbd38fe3277be072747b/init.el
+
+;; (use-package erc
+;;              :commands (erc erc-tls)
+;;              :bind (:map erc-mode-map
+;;                          ("C-c r" . reset-erc-track-mode))
+;;              :preface
+;;              (defun irc (&optional arg)
+;;                (interactive "P")
+;;                (if arg
+;;                    (pcase-dolist (`(,server . ,nick)
+;;                                   '(("irc.freenode.net"     . "johnw")
+;;                                     ("irc.gitter.im"        . "jwiegley")
+;;                                     ;; ("irc.oftc.net"         . "johnw")
+;;                                     ))
+;;                      (erc-tls :server server :port 6697 :nick (concat nick "_")
+;;                               :password (lookup-password server nick 6697)))
+;;                  (let ((pass (lookup-password "irc.freenode.net" "johnw" 6697)))
+;;                    (when (> (length pass) 32)
+;;                      (error "Failed to read ZNC password"))
+;;                    (erc :server "127.0.0.1" :port 6697 :nick "johnw"
+;;                         :password (concat "johnw/gitter:" pass))
+;;                    (sleep-for 5)
+;;                    (erc :server "127.0.0.1" :port 6697 :nick "johnw"
+;;                         :password (concat "johnw/freenode:" pass)))))
+
+;;              (defun reset-erc-track-mode ()
+;;                (interactive)
+;;                (setq erc-modified-channels-alist nil)
+;;                (erc-modified-channels-update)
+;;                (erc-modified-channels-display)
+;;                (force-mode-line-update))
+
+;;              (defun setup-irc-environment ()
+;;                (set (make-local-variable 'scroll-conservatively) 100)
+;;                (setq erc-timestamp-only-if-changed-flag nil
+;;                      erc-timestamp-format "%H:%M "
+;;                      erc-fill-prefix "          "
+;;                      erc-fill-column 78
+;;                      erc-insert-timestamp-function 'erc-insert-timestamp-left
+;;                      ivy-use-virtual-buffers nil))
+
+;;              (defcustom erc-foolish-content '()
+;;                "Regular expressions to identify foolish content.
+;;     Usually what happens is that you add the bots to
+;;     `erc-ignore-list' and the bot commands to this list."
+;;                :group 'erc
+;;                :type '(repeat regexp))
+
+;;              (defun erc-foolish-content (msg)
+;;                "Check whether MSG is foolish."
+;;                (erc-list-match erc-foolish-content msg))
+
+;;              :init
+;;              (add-hook 'erc-mode-hook #'setup-irc-environment)
+;;              (when alternate-emacs
+;;                (add-hook 'emacs-startup-hook 'irc))
+
+;;              (eval-after-load 'erc-identd
+;;                '(defun erc-identd-start (&optional port)
+;;                   "Start an identd server listening to port 8113.
+;;   Port 113 (auth) will need to be redirected to port 8113 on your
+;;   machine -- using iptables, or a program like redir which can be
+;;   run from inetd. The idea is to provide a simple identd server
+;;   when you need one, without having to install one globally on
+;;   your system."
+;;                   (interactive (list (read-string "Serve identd requests on port: " "8113")))
+;;                   (unless port (setq port erc-identd-port))
+;;                   (when (stringp port)
+;;                     (setq port (string-to-number port)))
+;;                   (when erc-identd-process
+;;                     (delete-process erc-identd-process))
+;;                   (setq erc-identd-process
+;;                         (make-network-process :name "identd"
+;;                                               :buffer nil
+;;                                               :host 'local :service port
+;;                                               :server t :noquery t
+;;                                               :filter 'erc-identd-filter))
+;;                   (set-process-query-on-exit-flag erc-identd-process nil)))
+
+;;              :config
+;;              (erc-track-minor-mode 1)
+;;              (erc-track-mode 1)
+
+;;              (add-hook 'erc-insert-pre-hook
+;;                        #'(lambda (s)
+;;                            (when (erc-foolish-content s)
+;;                              (setq erc-insert-this nil)))))
+
+;; (use-package erc-alert
+;;              :disabled t
+;;              :after erc)
+
+;; (use-package erc-highlight-nicknames
+;;              :after erc)
+
+;; (use-package erc-macros
+;;              :after erc)
+
+;; (use-package erc-patch
+;;              :disabled t
+;;              :after erc)
+
+;; (use-package erc-question
+;;              :disabled t
+;;              :after erc)
+
+;; (use-package erc-yank
+;;              :load-path "lisp/erc-yank"
+;;              :after erc
+;;              :bind (:map erc-mode-map
+;;                          ("C-y" . erc-yank )))

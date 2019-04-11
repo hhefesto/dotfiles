@@ -128,19 +128,24 @@ else
     dropbox start &
 fi
 
+# This is commented because it didn't work. Ranger leaves some sort of server runing even after shuting down (I think)
 # Ranger
-if pgrep -x 'ranger'; then
-    echo "Ranger already running"
-else
-    echo "Starting Ranger from zshrc"
-    clear
-    ranger
-fi
+# if pgrep -x 'ranger'; then
+#     echo "Ranger already running"
+# else
+#     echo "Starting Ranger from zshrc"
+#     clear
+#     ranger
+# fi
 
 # My aliases
 alias ls='lsd'
 # alias scrot='scrot ~/Pictures/Screenshots/%b%d::%H_%M_%S.png' # this is done in xmonad.hs
 
+# Nix
+
+# added manualy. copied from ~/.bash_profile & left the original there
+if [ -e /home/hhefesto/.nix-profile/etc/profile.d/nix.sh ]; then . /home/hhefesto/.nix-profile/etc/profile.d/nix.sh; fi
+
 # Clear
 clear
-
