@@ -13,7 +13,7 @@ myStartupHook :: X ()
 myStartupHook = do
   unsafeSpawn myTerminal -- I have to manualy remove this terminal because Dropbox starts there and won't stop printing msgs
   runOrRaise "emacs" (className =? "Emacs")
-  runOrRaise "google-chrome-stable" (className =? "Google-chrome")
+  runOrRaise "firefox" (className =? "Firefox")
   unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 myModMask            = mod4Mask                        -- Sets modkey to super/windows key
