@@ -13,7 +13,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (nix-mode use-package ranger magit manage-minor-mode hasky-stack intero gruber-darker-theme smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
+    (flycheck dante markdown-mode yaml-mode nix-mode use-package ranger magit manage-minor-mode hasky-stack intero gruber-darker-theme smex web-mode php-mode hamlet-mode shakespeare-mode company tide ts-comint typescript-mode haskell-mode zenburn-theme zenburn yasnippet multi-term)))
  '(safe-local-variable-values
    (quote
     ((hamlet/basic-offset . 4)
@@ -24,9 +24,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:height 125 :family "Hack")))))
 
-(setenv "PATH" (concat "/usr/local/bin:/opt/local/bin:/usr/bin:/bin" (getenv "PATH")))
+;; Why? require 'cl
 (require 'cl)
 
 (when (>= emacs-major-version 24)
@@ -131,10 +131,11 @@
 (global-whitespace-mode 1)
 
 (setq flyspell-issue-welcome-flag nil)
-(if (eq system-type 'darwin)
-    (setq-default ispell-program-name "/usr/local/bin/aspell")
-  (setq-default ispell-program-name "/usr/bin/aspell"))
-(setq-default ispell-list-command "list")
+;; (if (eq system-type 'darwin)
+;;     (setq-default ispell-program-name "/usr/local/bin/aspell")
+;;   (setq-default ispell-program-name "/usr/bin/aspell"))
+(setq-default ispell-program-name "/run/current-system/sw/bin/aspell")
+;; (setq-default ispell-list-command "list")
 
 (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("\\.zshrc$" . shell-script-mode))
@@ -295,10 +296,10 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 (add-hook 'c++-mode-hook 'my-c-mode-hook)
 
                                         ;--------Miscellaneous--------
-(require 'yasnippet)
-(add-to-list 'yas-snippet-dirs "~/.emacs.d/yasnippet-snippets")
+;; (require 'yasnippet)
+;; (add-to-list 'yas-snippet-dirs "~/.emacs.d/yasnippet-snippets")
 
-(yas-global-mode 1)
+;; (yas-global-mode 1)
 
 ;;(if (not (get-buffer "*terminal<1>*"))
 ;;    (multi-term))
@@ -327,14 +328,34 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 
 ;;-----------Haskell----------------
 
+(add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
+
 ;; (add-hook 'haskell-mode-hook 'intero-mode)
-;; (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
+
 ;; (setq intero-blacklist '("/home/hhefesto/dev/YesodEmailAuthBookExample/src/Main.hs"))
 ;; (add-hook 'haskell-mode-hook 'intero-mode-blacklist) ;; I added this because setq intero-blacklist isn't working properly
+;; (intero-global-mode 1)
 
-(intero-global-mode 1)
-(add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
-(setq intero-blacklist '("/home/hhefesto/dev/YesodEmailAuthBookExample/"))
+;; (use-package dante
+;;   :ensure t
+;;   :after haskell-mode
+;;   :commands 'dante-mode
+;;   :init
+;;   (add-hook 'haskell-mode-hook 'flycheck-mode)
+;;   ;; OR:
+;;   ;; (add-hook 'haskell-mode-hook 'flymake-mode)
+;;   (add-hook 'haskell-mode-hook 'dante-mode)
+;;   )
+
+;; (setq flymake-no-changes-timeout nil)
+;; (setq flymake-start-syntax-check-on-newline nil)
+;; (setq flycheck-check-syntax-automatically '(save mode-enabled))
+
+;; (add-hook 'dante-mode-hook
+;;    '(lambda () (flycheck-add-next-checker 'haskell-dante
+;;                 '(warning . haskell-hlint))))
+
+;; (setq intero-blacklist '("/home/hhefesto/src/YesodEmailAuthBookExample/" "/home/hhefesto/src/dotfiles" "/home/hhefesto/src/layer3com/layer3com" "/home/hhefesto/src/ejercicios-victor" "/home/hhefesto/src/log")) ;;"/home/hhefesto/src/stand-in-language"))
 
 ;;-----------Magit----------------
 ;; Getting startued tutorial at:
@@ -455,3 +476,8 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 ;;              :after erc
 ;;              :bind (:map erc-mode-map
 ;;                          ("C-y" . erc-yank )))
+
+;; (setenv "PATH" (concat (getenv "PATH") ":/run/current-system/sw/bin/"))
+;; (setq exec-path (append exec-path '("/run/current-system/sw/bin/")))
+;; (setq ispell-program-name "/run/current-system/sw/bin/aspell")
+;; (add-to-list 'exec-path "/run/current-system/sw/bin/")

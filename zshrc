@@ -1,12 +1,12 @@
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/$USER/.oh-my-zsh
+# export ZSH=/home/$USER/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+# ZSH_THEME="bira"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,13 +50,13 @@ ZSH_THEME="bira"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dnf sudo colorize extract history postgres)
+# plugins=(git sudo colorize extract history postgres)
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -84,24 +84,24 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Java
-export JAVA_HOME=/usr/java/jdk1.8.0_60
-export CLASSPATH=".:/usr/local/lib/:/usr/local/lib/antlr-4.0-complete.jar:$CLASSPATH"
-export AWT_TOOLKIT=MToolkit
-export _JAVA_AWT_WM_NONREPARENTING=1
+# export JAVA_HOME=/usr/java/jdk1.8.0_60
+# export CLASSPATH=".:/usr/local/lib/:/usr/local/lib/antlr-4.0-complete.jar:$CLASSPATH"
+# export AWT_TOOLKIT=MToolkit
+# export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Antlr4
-alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
-alias grun='java org.antlr.v4.runtime.misc.TestRig'
+# alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
+# alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 # Path
-export PATH="/home/$USER/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/$USER/.local/bin:/home/$USER/bin:/home/$USER/bin/arduino:/usr/pgsql-9.4/bin"
+# export PATH="/home/$USER/.cabal/bin:/usr/java/jdk1.8.0_60/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/$USER/.local/bin:/home/$USER/bin:/home/$USER/bin/arduino:/usr/pgsql-9.4/bin"
 
 # stack executables:
-export PATH=/root/.local/bin:$PATH
-export PATH=/home/hhefesto/.local/bin:$PATH
+# export PATH=/root/.local/bin:$PATH
+# export PATH=/home/hhefesto/.local/bin:$PATH
 
-# rust
-export PATH="$HOME/.cargo/bin:$PATH"
+# # rust
+# export PATH="$HOME/.cargo/bin:$PATH"
 
 # ssh-keys
 # ssh-add ~/.ssh/id_rsa_github
@@ -109,24 +109,24 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # ssh-add ~/.ssh/id_rsa_rdataa.pem
 
 # Emacs
-if [ -n "$INSIDE_EMACS" ]; then
-    export ZSH_THEME="rawsyntax"
-else
-    export ZSH_THEME="robbyrussell"
-fi
+# if [ -n "$INSIDE_EMACS" ]; then
+#     export ZSH_THEME="rawsyntax"
+# else
+#     export ZSH_THEME="robbyrussell"
+# fi
 
 # NVM (Node)
-export NVM_DIR="/home/$USER/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="/home/$USER/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Dropbox
-if pgrep -x 'dropbox'; then
-    echo "Dropbox already running"
-else
-    echo "Starting Dropbox from zshrc"
-    dropbox start &
-fi
+# if pgrep -x 'dropbox'; then
+#     echo "Dropbox already running"
+# else
+#     echo "Starting Dropbox from zshrc"
+#     dropbox start &
+# fi
 
 # This is commented because it didn't work. Ranger leaves some sort of server runing even after shuting down (I think)
 # Ranger
@@ -139,13 +139,13 @@ fi
 # fi
 
 # My aliases
-alias ls='lsd'
+# alias ls='lsd'
 # alias scrot='scrot ~/Pictures/Screenshots/%b%d::%H_%M_%S.png' # this is done in xmonad.hs
 
 # Nix
 
 # added manualy. copied from ~/.bash_profile & left the original there
-if [ -e /home/hhefesto/.nix-profile/etc/profile.d/nix.sh ]; then . /home/hhefesto/.nix-profile/etc/profile.d/nix.sh; fi
+# if [ -e /home/hhefesto/.nix-profile/etc/profile.d/nix.sh ]; then . /home/hhefesto/.nix-profile/etc/profile.d/nix.sh; fi
 
 # Clear
-clear
+# clear
