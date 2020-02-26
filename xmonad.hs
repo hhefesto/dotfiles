@@ -14,7 +14,7 @@ import XMonad.Actions.WindowGo (runOrRaise)
 
 myStartupHook :: X ()
 myStartupHook = do
-  unsafeSpawn "feh --bg-scale ~/Pictures/Wallpaper/haskell-pattern.png &"
+  unsafeSpawn "feh --bg-scale ~/Pictures/wallpaper.png &"
   unsafeSpawn myTerminal -- I have to manualy remove this terminal because Dropbox starts there and won't stop printing msgs
   runOrRaise "emacs" (className =? "Emacs")
   runOrRaise "firefox" (className =? "Firefox")
