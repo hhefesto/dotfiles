@@ -149,3 +149,4 @@
 
 # Clear
 # clear
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
