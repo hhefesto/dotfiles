@@ -1,15 +1,16 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 
-import XMonad
-import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.ManageDocks
-import XMonad.Util.Brightness
-import XMonad.Util.Run(spawnPipe, unsafeSpawn)
-import XMonad.Util.EZConfig(additionalKeysP)
-import System.IO
-import XMonad.Layout.IndependentScreens
-import XMonad.Layout.Spacing 
-import XMonad.Actions.WindowGo (runOrRaise)
+import           System.IO
+import           XMonad
+import           XMonad.Actions.WindowGo          (runOrRaise)
+import           XMonad.Hooks.DynamicLog
+import           XMonad.Hooks.ManageDocks
+import           XMonad.Layout.IndependentScreens
+import           XMonad.Layout.MouseResizableTile
+import           XMonad.Layout.Spacing
+import           XMonad.Util.Brightness
+import           XMonad.Util.EZConfig             (additionalKeysP)
+import           XMonad.Util.Run                  (spawnPipe, unsafeSpawn)
 -- import XMonad.Wallpaper --For some reason, doesnt find it
 
 myStartupHook :: X ()
@@ -17,6 +18,8 @@ myStartupHook = do
   unsafeSpawn "feh --bg-scale ~/Pictures/wallpaper.png &"
   unsafeSpawn myTerminal -- I have to manualy remove this terminal because Dropbox starts there and won't stop printing msgs
   runOrRaise "emacs" (className =? "Emacs")
+  runOrRaise "spotify" (className =? "Spotify")
+  runOrRaise "nautilus" (className =? "Nautilus")
   runOrRaise "firefox" (className =? "Firefox")
   unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
@@ -53,8 +56,8 @@ main = do
         , terminal           = myTerminal
         } `additionalKeysP`
         [ ("<Print>", spawn "scrot -e \'mv $f ~/Pictures/Screenshots\'")
-        , ("M-h", decrease) -- decrease brightness
-        , ("M-l", increase) -- increase brightness
+        -- , ("M-h", decrease) -- decrease brightness
+        -- , ("M-l", increase) -- increase brightness
         , ("M-j", spawn "amixer -q sset Master 2%-")
         , ("M-k", spawn "amixer -q sset Master 2%+")
         , ("M-m", spawn "amixer set Master toggle")

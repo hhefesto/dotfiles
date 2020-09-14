@@ -481,3 +481,4 @@ If you do not like default setup, modify it, with (KEY . COMMAND) format."
 ;; (setq exec-path (append exec-path '("/run/current-system/sw/bin/")))
 ;; (setq ispell-program-name "/run/current-system/sw/bin/aspell")
 ;; (add-to-list 'exec-path "/run/current-system/sw/bin/")
+(put 'downcase-region 'disabled nil)

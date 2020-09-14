@@ -149,4 +149,8 @@
 
 # Clear
 # clear
+eval "$(direnv hook zsh)"
+
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+
+alias l='ls -lt --color=tty'

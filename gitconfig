@@ -1,6 +1,6 @@
 [user]
         email = hhefesto@rdataa.com
-        name = hhefesto
+	name = hhefesto
 [alias]
         lg = !"git lg1 --simplify-by-decoration"
         lg1 = !"git lg1-specific --all --simplify-by-decoration"
