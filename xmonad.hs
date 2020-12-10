@@ -56,8 +56,8 @@ main = do
         , terminal           = myTerminal
         } `additionalKeysP`
         [ ("<Print>", spawn "scrot -e \'mv $f ~/Pictures/Screenshots\'")
-        -- , ("M-h", decrease) -- decrease brightness
-        -- , ("M-l", increase) -- increase brightness
+        , ("M-u", decrease) -- decrease brightness
+        , ("M-i", increase) -- increase brightness
         , ("M-j", spawn "amixer -q sset Master 2%-")
         , ("M-k", spawn "amixer -q sset Master 2%+")
         , ("M-m", spawn "amixer set Master toggle")
@@ -68,4 +68,3 @@ main = do
         -- , ("M-h", spawn "xdotool key Left")
         ]
 --        , ((mod4mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
-
