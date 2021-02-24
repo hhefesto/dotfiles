@@ -9,7 +9,7 @@
 dir=~/src/dotfiles                    # dotfiles directory
 olddir=~/src/dotfiles/dotfiles_old    # old dotfiles backup directory
 
-files="~/.doom.d/config.el ~/.doom.d/custom.el ~/.doom.d/init.el ~/.doom.d/packages ~/.zshrc ~/.xmobarrc ~/.xmonad/xmonad.hs ~/.xsession ~/.Xresources ~/.ghc/ghci.conf"    # list of files/folders to symlink in homedir
+files="~/Pictures/Screenshots/wallpaper.png ~/.doom.d/config.el ~/.doom.d/custom.el ~/.doom.d/init.el ~/.doom.d/packages ~/.zshrc ~/.xmobarrc ~/.xmonad/xmonad.hs ~/.xsession ~/.Xresources ~/.ghc/ghci.conf"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -20,6 +20,7 @@ echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p ~/.xmonad
 mkdir -p ~/.ghc/ghci.conf
 mkdir -p ~/.doom.d
+mkdir -p ~/Pictures/Screenshots
 mkdir -p $dir
 mkdir -p $olddir
 echo "done"
@@ -59,8 +60,10 @@ ln -s $dir/.doom.d/config.el ~/.doom.d/config.el
 ln -s $dir/.doom.d/custom.el ~/.doom.d/custom.el
 ln -s $dir/.doom.d/init.el ~/.doom.d/init.el
 ln -s $dir/.doom.d/packages.el ~/.doom.d/packages.el
+ln -s $dir/wallpaper.png ~/Pictures/wallpaper.png
 
 # doom-emacs install
+echo "Installing Doom Emacs."
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
