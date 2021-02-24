@@ -56,10 +56,10 @@ ln -s $dir/xmonad.hs ~/.xmonad/xmonad.hs
 ln -s $dir/xsession ~/.xsession
 ln -s $dir/Xresources ~/.Xresources
 ln -s $dir/ghci.conf ~/.ghc/ghci.conf
-ln -s $dir/.doom.d/config.el ~/.doom.d/config.el
-ln -s $dir/.doom.d/custom.el ~/.doom.d/custom.el
-ln -s $dir/.doom.d/init.el ~/.doom.d/init.el
-ln -s $dir/.doom.d/packages.el ~/.doom.d/packages.el
+ln -s $dir/config.el ~/.doom.d/config.el
+ln -s $dir/custom.el ~/.doom.d/custom.el
+ln -s $dir/init.el ~/.doom.d/init.el
+ln -s $dir/packages.el ~/.doom.d/packages.el
 ln -s $dir/wallpaper.png ~/Pictures/wallpaper.png
 
 # doom-emacs install
