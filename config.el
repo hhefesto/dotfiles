@@ -95,7 +95,7 @@
    :map ivy-minibuffer-map
    ("M-y" . ivy-next-line)))
 
-(setq display-line-numbers-type 'relative)
+;; (setq display-line-numbers-type 'relative)
 
 (setq-default
  delete-by-moving-to-trash t                      ; Delete files to trash
@@ -315,9 +315,10 @@ In that case, insert the number."
 (use-package lsp-haskell
  :ensure t
  :config
- (setq lsp-haskell-process-path-hie "haskell-language-server-wrapper")
+ ;; (setq lsp-haskell-process-path-hie "haskell-language-server")
+ (setq lsp-haskell-server-path "/nix/store/m7bpl5ija9z74ni4zrw315wlm1xvn44j-haskell-language-server-exe-haskell-language-server-0.9.0.0/bin/haskell-language-server")
  ;; Comment/uncomment this line to see interactions between lsp client/server.
- ;;(setq lsp-log-io t)
+ (setq lsp-log-io t)
 )
 
 (use-package haskell-mode
@@ -332,13 +333,14 @@ In that case, insert the number."
     (interactive)
     (progn (haskell-mode-stylish-buffer)
            (save-buffer)))
-  (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
+  ;; (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
   :bind (:map haskell-mode-map
          ("C-c h" . hoogle)
          ("C-c sh" . haskell-mode-stylish-buffer)
          ("C-c C-," . haskell-navigate-imports)
          ("C-x C-s" . my-save)
-         ("M-.". my-lookup-def))
+         ;; ("M-.". my-lookup-def)
+         )
   :config (message "Loaded haskell-mode")
   (setq haskell-mode-stylish-haskell-path "stylish-haskell")
   (setq haskell-hoogle-url "https://www.stackage.org/lts/hoogle?q=%s"))
@@ -348,7 +350,7 @@ In that case, insert the number."
     (interactive)
     (progn (call-interactively '+lookup/definition)
            (recenter-top-bottom)))
-(map! "M-." 'my-lookup-def)
+;; (map! "M-." 'my-lookup-def)
 
-(use-package lsp-mode
-  :commands lsp-mode)
+;; (use-package lsp-mode
+;;   :commands lsp-mode)
