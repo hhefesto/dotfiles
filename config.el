@@ -21,7 +21,7 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "Hack" :size 24))
+(setq doom-font (font-spec :family "Hack" :size 22))
 ;; (setq doom-font (font-spec :family "Hack" :size 22))
 
 ;; (setq doom-font (font-spec :family "JetBrains Mono" :size 24)
@@ -157,125 +157,125 @@
   ;; (centaur-tabs-change-fonts "P22 Underground Book" 160))
 ;; (setq x-underline-at-descent-line t)
 
-(use-package company
-  :bind (:map company-active-map
-         ("C-n" . company-select-next)
-         ("C-p" . company-select-previous))
-  :config
-  (global-company-mode t))
+;; (use-package company
+;;   :bind (:map company-active-map
+;;          ("C-n" . company-select-next)
+;;          ("C-p" . company-select-previous))
+;;   :config
+;;   (global-company-mode t))
 
-(after! company
-  (setq company-idle-delay 0.0
-        company-minimum-prefix-length 2
-        company-transformers nil)
-  (setq company-show-numbers t)
-  ;; (define-key company-active-map (kbd "C-n") 'company-select-next-or-abort)
-  ;; (define-key company-active-map (kbd "C-j") 'company-select-previous-or-abort)
+;; (after! company
+;;   (setq company-idle-delay 0.0
+;;         company-minimum-prefix-length 2
+;;         company-transformers nil)
+;;   (setq company-show-numbers t)
+;;   ;; (define-key company-active-map (kbd "C-n") 'company-select-next-or-abort)
+;;   ;; (define-key company-active-map (kbd "C-j") 'company-select-previous-or-abort)
 
-(defun ora-company-number ()
-  "Forward to `company-complete-number'.
-Unless the number is potentially part of the candidate.
-In that case, insert the number."
-  (interactive)
-  (let* ((k (this-command-keys))
-         (re (concat "^" company-prefix k)))
-    (if (or (cl-find-if (lambda (s) (string-match re s))
-                        company-candidates)
-            (> (string-to-number k)
-               (length company-candidates))
-            (looking-back "[0-9]+\\.[0-9]*" (line-beginning-position)))
-        (self-insert-command 1)
-      (company-complete-number
-       (if (equal k "0")
-           10
-         (string-to-number k))))))
+;; (defun ora-company-number ()
+;;   "Forward to `company-complete-number'.
+;; Unless the number is potentially part of the candidate.
+;; In that case, insert the number."
+;;   (interactive)
+;;   (let* ((k (this-command-keys))
+;;          (re (concat "^" company-prefix k)))
+;;     (if (or (cl-find-if (lambda (s) (string-match re s))
+;;                         company-candidates)
+;;             (> (string-to-number k)
+;;                (length company-candidates))
+;;             (looking-back "[0-9]+\\.[0-9]*" (line-beginning-position)))
+;;         (self-insert-command 1)
+;;       (company-complete-number
+;;        (if (equal k "0")
+;;            10
+;;          (string-to-number k))))))
 
-(defun ora--company-good-prefix-p (orig-fn prefix)
-  (unless (and (stringp prefix) (string-match-p "\\`[0-9]+\\'" prefix))
-    (funcall orig-fn prefix)))
-(advice-add 'company--good-prefix-p :around #'ora--company-good-prefix-p)
+;; (defun ora--company-good-prefix-p (orig-fn prefix)
+;;   (unless (and (stringp prefix) (string-match-p "\\`[0-9]+\\'" prefix))
+;;     (funcall orig-fn prefix)))
+;; (advice-add 'company--good-prefix-p :around #'ora--company-good-prefix-p)
 
-(let ((map company-active-map))
-  (mapc (lambda (x) (define-key map (format "%d" x) 'ora-company-number))
-        (number-sequence 0 9))
-  (define-key map " " (lambda ()
-                        (interactive)
-                        (company-abort)
-                        (self-insert-command 1)))
-  (define-key map (kbd "<return>") nil))
-  )
+;; (let ((map company-active-map))
+;;   (mapc (lambda (x) (define-key map (format "%d" x) 'ora-company-number))
+;;         (number-sequence 0 9))
+;;   (define-key map " " (lambda ()
+;;                         (interactive)
+;;                         (company-abort)
+;;                         (self-insert-command 1)))
+;;   (define-key map (kbd "<return>") nil))
+;;   )
 
-(setq-default history-length 1000)
-(setq-default prescient-history-length 1000)
+;; (setq-default history-length 1000)
+;; (setq-default prescient-history-length 1000)
 
-(set-company-backend! '(nix-mode)
-  '(:separate company-nixos-options
-              company-tabnine
-              company-files
-              company-yasnippet
-              ))
+;; (set-company-backend! '(nix-mode)
+;;   '(:separate company-nixos-options
+;;               company-tabnine
+;;               company-files
+;;               company-yasnippet
+;;               ))
 
-(set-company-backend! '(text-mode
-                        markdown-mode
-                        gfm-mode)
-  '(:seperate company-ispell
-              company-files
-              company-yasnippet
-              company-dabbrev))
+;; (set-company-backend! '(text-mode
+;;                         markdown-mode
+;;                         gfm-mode)
+;;   '(:seperate company-ispell
+;;               company-files
+;;               company-yasnippet
+;;               company-dabbrev))
 
-(set-company-backend! '(c-mode
-                        c++-mode
-                        ess-mode
-                        haskell-mode
-                        ;;emacs-lisp-mode
-                        lisp-mode
-                        sh-mode
-                        php-mode
-                        python-mode
-                        go-mode
-                        ruby-mode
-                        rust-mode
-                        js-mode
-                        css-mode
-                        web-mode
-                        )
-  '(:separate company-tabnine
-              company-files
-              company-yasnippet))
+;; (set-company-backend! '(c-mode
+;;                         c++-mode
+;;                         ess-mode
+;;                         haskell-mode
+;;                         ;;emacs-lisp-mode
+;;                         lisp-mode
+;;                         sh-mode
+;;                         php-mode
+;;                         python-mode
+;;                         go-mode
+;;                         ruby-mode
+;;                         rust-mode
+;;                         js-mode
+;;                         css-mode
+;;                         web-mode
+;;                         )
+;;   '(:separate company-tabnine
+;;               company-files
+;;               company-yasnippet))
 
-(setq +lsp-company-backend '(company-lsp :with company-tabnine :separate))
+;; (setq +lsp-company-backend '(company-lsp :with company-tabnine :separate))
 
-(use-package! company-tabnine
-  :when (featurep! :completion company)
-  :config
-  (setq company-tabnine--disable-next-transform nil)
-  (defun my-company--transform-candidates (func &rest args)
-    (if (not company-tabnine--disable-next-transform)
-        (apply func args)
-      (setq company-tabnine--disable-next-transform nil)
-      (car args)))
+;; (use-package! company-tabnine
+;;   :when (featurep! :completion company)
+;;   :config
+;;   (setq company-tabnine--disable-next-transform nil)
+;;   (defun my-company--transform-candidates (func &rest args)
+;;     (if (not company-tabnine--disable-next-transform)
+;;         (apply func args)
+;;       (setq company-tabnine--disable-next-transform nil)
+;;       (car args)))
 
-  (defun my-company-tabnine (func &rest args)
-    (when (eq (car args) 'candidates)
-      (setq company-tabnine--disable-next-transform t))
-    (apply func args))
+;;   (defun my-company-tabnine (func &rest args)
+;;     (when (eq (car args) 'candidates)
+;;       (setq company-tabnine--disable-next-transform t))
+;;     (apply func args))
 
-  (advice-add #'company--transform-candidates :around #'my-company--transform-candidates)
-  (advice-add #'company-tabnine :around #'my-company-tabnine)
-  ;; Trigger completion immediately.
-  ;; (setq company-idle-delay 0)
+;;   (advice-add #'company--transform-candidates :around #'my-company--transform-candidates)
+;;   (advice-add #'company-tabnine :around #'my-company-tabnine)
+;;   ;; Trigger completion immediately.
+;;   ;; (setq company-idle-delay 0)
 
-  ;; Number the candidates (use M-1, M-2 etc to select completions).
-  (setq company-show-numbers t)
+;;   ;; Number the candidates (use M-1, M-2 etc to select completions).
+;;   (setq company-show-numbers t)
 
-  ;; Use the tab-and-go frontend.
-  ;; Allows TAB to select and complete at the same time.
-  (company-tng-configure-default)
-  (setq company-frontends
-        '(company-tng-frontend
-          company-pseudo-tooltip-frontend
-          company-echo-metadata-frontend))
-  )
+;;   ;; Use the tab-and-go frontend.
+;;   ;; Allows TAB to select and complete at the same time.
+;;   (company-tng-configure-default)
+;;   (setq company-frontends
+;;         '(company-tng-frontend
+;;           company-pseudo-tooltip-frontend
+;;           company-echo-metadata-frontend))
+;;   )
 
 (after! flyspell (require 'flyspell-lazy) (flyspell-lazy-mode 1))
 
@@ -316,7 +316,8 @@ In that case, insert the number."
  :ensure t
  :config
  ;; (setq lsp-haskell-process-path-hie "haskell-language-server")
- (setq lsp-haskell-server-path "/nix/store/m7bpl5ija9z74ni4zrw315wlm1xvn44j-haskell-language-server-exe-haskell-language-server-0.9.0.0/bin/haskell-language-server")
+ (setq lsp-haskell-server-path "/nix/store/llazrr7pgr0z4a048g2g6yiz2xg585ig-haskell-language-server-exe-haskell-language-server-1.1.0.0/bin/haskell-language-server")
+ (setq lsp-haskell-formatting-provider "stylish-haskell")
  ;; Comment/uncomment this line to see interactions between lsp client/server.
  (setq lsp-log-io t)
 )
@@ -345,11 +346,12 @@ In that case, insert the number."
   (setq haskell-mode-stylish-haskell-path "stylish-haskell")
   (setq haskell-hoogle-url "https://www.stackage.org/lts/hoogle?q=%s"))
 
-(defun my-lookup-def ()
-    "recenter buffer after defenition lookup"
-    (interactive)
-    (progn (call-interactively '+lookup/definition)
-           (recenter-top-bottom)))
+;; (defun my-lookup-def ()
+;;     "recenter buffer after defenition lookup"
+;;     (interactive)
+;;     (progn (call-interactively '+lookup/definition)
+;;            (recenter-top-bottom)))
+
 ;; (map! "M-." 'my-lookup-def)
 
 ;; (use-package lsp-mode
