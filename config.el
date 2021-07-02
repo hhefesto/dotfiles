@@ -21,8 +21,8 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "Hack" :size 22))
-;; (setq doom-font (font-spec :family "Hack" :size 22))
+;; (setq doom-font (font-spec :family "Hack" :size 22)) ;; thinkpad
+(setq doom-font (font-spec :family "Hack" :size 16)) ;; desktop
 
 ;; (setq doom-font (font-spec :family "JetBrains Mono" :size 24)
 ;;       doom-big-font (font-spec :family "JetBrains Mono" :size 36)
@@ -316,7 +316,7 @@
  :ensure t
  :config
  ;; (setq lsp-haskell-process-path-hie "haskell-language-server")
- (setq lsp-haskell-server-path "/nix/store/llazrr7pgr0z4a048g2g6yiz2xg585ig-haskell-language-server-exe-haskell-language-server-1.1.0.0/bin/haskell-language-server")
+ (setq lsp-haskell-server-path "/nix/store/1jcpknb79lqckq8kxbh1adslk59ldqqz-haskell-language-server-exe-haskell-language-server-1.2.0.0/bin/haskell-language-server")
  (setq lsp-haskell-formatting-provider "stylish-haskell")
  ;; Comment/uncomment this line to see interactions between lsp client/server.
  (setq lsp-log-io t)
