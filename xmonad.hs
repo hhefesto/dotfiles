@@ -21,6 +21,7 @@ myStartupHook = do
   runOrRaise "spotify" (className =? "Spotify")
   runOrRaise "nautilus" (className =? "Nautilus")
   runOrRaise "firefox" (className =? "Firefox")
+  runOrRaise "signal-desktop" (className =? "Signal")
   unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 myModMask            = mod4Mask                        -- Sets modkey to super/windows key
