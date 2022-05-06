@@ -16,12 +16,14 @@ import           XMonad.Util.Run                  (spawnPipe, unsafeSpawn)
 myStartupHook :: X ()
 myStartupHook = do
   unsafeSpawn "feh --bg-scale ~/Pictures/wallpaper.png &"
-  unsafeSpawn myTerminal -- I have to manualy remove this terminal because Dropbox starts there and won't stop printing msgs
+  -- unsafeSpawn myTerminal -- I have to manualy remove this terminal because Dropbox starts there and won't stop printing msgs
+  runOrRaise "gnome-terminal" (className =? "Gnome-terminal")
   runOrRaise "emacs" (className =? "Emacs")
   runOrRaise "spotify" (className =? "Spotify")
-  runOrRaise "nautilus" (className =? "Nautilus")
-  runOrRaise "firefox" (className =? "Firefox")
+  runOrRaise "nautilus" (className =? "Org.gnome.Nautilus")
+  runOrRaise "firefox" (className =? "firefox-default")
   runOrRaise "signal-desktop" (className =? "Signal")
+  -- runOrRaise "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center" (className =? "Gnome-control-center")
   unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 myModMask            = mod4Mask                        -- Sets modkey to super/windows key
@@ -37,10 +39,21 @@ myFocusedBorderColor = "#7fff00"
 
 mySpacing = spacingRaw True (Border 0 10 10 10) True (Border 10 10 10 10) True
 
+myManageHook = composeAll
+   [ className =? "Emacs" --> doShift "1"
+   , className =? "Gnome-terminal" --> doShift "1"
+   , className =? "firefox-default" --> doShift "2"
+   , className =? "Org.gnome.Nautilus" --> doShift "3"
+   , className =? "Spotify" --> doShift "4"
+   , className =? "Gnome-control-center" --> doShift "4"
+   , className =? "Signal" --> doShift "5"
+   , manageDocks
+   ]
+
 main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ defaultConfig
-        { manageHook = manageDocks <+> manageHook defaultConfig
+        { manageHook = myManageHook <+> manageHook defaultConfig
         , layoutHook = avoidStruts . mySpacing $ layoutHook defaultConfig
           --smartSpacing 20 $ Tall 1 (3/100) (1/2)
           --avoidStruts $ layoutHook defaultConfig
