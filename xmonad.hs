@@ -17,7 +17,6 @@ myStartupHook = do
   unsafeSpawn "feh --bg-scale ~/Pictures/wallpaper.png &"
   runOrRaise "gnome-terminal" (className =? "Gnome-terminal")
   runOrRaise "emacs" (className =? "Emacs")
-  runOrRaise "spotifywm" (className =? "Spotify")
   runOrRaise "nautilus" (className =? "Org.gnome.Nautilus")
   runOrRaise "firefox" (className =? "firefox-default")
   runOrRaise "signal-desktop" (className =? "Signal")
@@ -34,10 +33,8 @@ mySpacing = spacingRaw True (Border 0 10 10 10) True (Border 10 10 10 10) True
 
 myManageHook = composeAll
    [ className =? "Emacs" --> doShift "1"
-   , className =? "Gnome-terminal" --> doShift "1"
    , className =? "firefox-default" --> doShift "2"
    , className =? "Org.gnome.Nautilus" --> doShift "3"
-   , className =? "Spotify" --> doShift "4"
    , className =? "Gnome-control-center" --> doShift "4"
    , className =? "Signal" --> doShift "5"
    , manageDocks
