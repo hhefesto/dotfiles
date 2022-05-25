@@ -63,6 +63,7 @@
 
 ;; (direnv-mode)
 
+
 (setq-default cursor-type 'bar)
 
 ;; (load-theme 'gruber-darker t)
@@ -312,11 +313,31 @@
 ;;   :config
 ;;   (add-to-list 'eglot-server-programs '(haskell-mode . ("ghcide" "--lsp"))))
 
+(use-package direnv
+  :config
+  ;; enable globally
+  (direnv-mode)
+  ;; exceptions
+  ; (add-to-list 'direnv-non-file-modes 'foobar-mode)
+
+  ;; nix-shells make too much spam -- hide
+  ;; (setq direnv-always-show-summary nil)
+
+  :hook
+  ;; ensure direnv updates before flycheck and lsp
+  ;; https://github.com/wbolster/emacs-direnv/issues/17
+  ;; (flycheck-before-syntax-check . direnv-update-environment)
+  (lsp-before-open-hook . direnv-update-environment)
+
+  :custom
+  ;; quieten logging
+  (warning-suppress-types '((direnv))))
+
 (use-package lsp-haskell
  :ensure t
+ :after (haskell-mode lsp-mode)
  :config
- ;; (setq lsp-haskell-process-path-hie "haskell-language-server")
- (setq lsp-haskell-server-path "/nix/store/wlshb03acqkqdlidwf7sv0q2y5x90k61-haskell-language-server-exe-haskell-language-server-1.6.1.1/bin/haskell-language-server")
+ (setq lsp-haskell-server-path "haskell-language-server")
  (setq lsp-haskell-formatting-provider "stylish-haskell")
  ;; Comment/uncomment this line to see interactions between lsp client/server.
  (setq lsp-log-io t)
@@ -335,6 +356,8 @@
     (progn (haskell-mode-stylish-buffer)
            (save-buffer)))
   ;; (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
+  ;; :hook (;; (haskell-mode . rvl/stylish-on-save)
+  ;;        (haskell-mode . direnv-update-environment))
   :bind (:map haskell-mode-map
          ("C-c h" . hoogle)
          ("C-c sh" . haskell-mode-stylish-buffer)
