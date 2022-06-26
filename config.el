@@ -316,7 +316,7 @@
  :ensure t
  :config
  ;; (setq lsp-haskell-process-path-hie "haskell-language-server")
- (setq lsp-haskell-server-path "/nix/store/llazrr7pgr0z4a048g2g6yiz2xg585ig-haskell-language-server-exe-haskell-language-server-1.1.0.0/bin/haskell-language-server")
+ (setq lsp-haskell-server-path "/nix/store/xc0mjm66av8xr687jyysn8pqmf36974p-haskell-language-server-exe-haskell-language-server-1.6.1.1/bin/haskell-language-server")
  (setq lsp-haskell-formatting-provider "stylish-haskell")
  ;; Comment/uncomment this line to see interactions between lsp client/server.
  (setq lsp-log-io t)

@@ -58,6 +58,7 @@ main = do
         [ ("<Print>", spawn "scrot -e \'mv $f ~/Pictures/Screenshots\'")
         , ("M-u", decrease) -- decrease brightness
         , ("M-i", increase) -- increase brightness
+        , ("M-y", setBrightness 100) -- set to minimum brightness
         , ("M-j", spawn "amixer -q sset Master 2%-")
         , ("M-k", spawn "amixer -q sset Master 2%+")
         , ("M-m", spawn "amixer set Master toggle")
