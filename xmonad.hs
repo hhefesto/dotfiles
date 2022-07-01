@@ -36,7 +36,7 @@ myManageHook = composeAll
    , className =? "firefox-default" --> doShift "2"
    , className =? "Org.gnome.Nautilus" --> doShift "3"
    , className =? "Gnome-control-center" --> doShift "4"
-   , className =? "Signal" --> doShift "5"
+   , className =? "Signal" --> doShift "6"
    , manageDocks
    ]
 
