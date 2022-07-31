@@ -21,8 +21,8 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "Hack" :size 22))
-;; (setq doom-font (font-spec :family "Hack" :size 22))
+;; (setq doom-font (font-spec :family "Hack" :size 22)) ;; thinkpad
+(setq doom-font (font-spec :family "Hack" :size 16)) ;; desktop
 
 ;; (setq doom-font (font-spec :family "JetBrains Mono" :size 24)
 ;;       doom-big-font (font-spec :family "JetBrains Mono" :size 36)
@@ -62,6 +62,7 @@
 ;; they are implemented.
 
 ;; (direnv-mode)
+
 
 (setq-default cursor-type 'bar)
 
@@ -312,11 +313,31 @@
 ;;   :config
 ;;   (add-to-list 'eglot-server-programs '(haskell-mode . ("ghcide" "--lsp"))))
 
+(use-package direnv
+  :config
+  ;; enable globally
+  (direnv-mode)
+  ;; exceptions
+  ; (add-to-list 'direnv-non-file-modes 'foobar-mode)
+
+  ;; nix-shells make too much spam -- hide
+  ;; (setq direnv-always-show-summary nil)
+
+  :hook
+  ;; ensure direnv updates before flycheck and lsp
+  ;; https://github.com/wbolster/emacs-direnv/issues/17
+  ;; (flycheck-before-syntax-check . direnv-update-environment)
+  (lsp-before-open-hook . direnv-update-environment)
+
+  :custom
+  ;; quieten logging
+  (warning-suppress-types '((direnv))))
+
 (use-package lsp-haskell
  :ensure t
+ :after (haskell-mode lsp-mode)
  :config
- ;; (setq lsp-haskell-process-path-hie "haskell-language-server")
- (setq lsp-haskell-server-path "/nix/store/xc0mjm66av8xr687jyysn8pqmf36974p-haskell-language-server-exe-haskell-language-server-1.6.1.1/bin/haskell-language-server")
+ (setq lsp-haskell-server-path "haskell-language-server")
  (setq lsp-haskell-formatting-provider "stylish-haskell")
  ;; Comment/uncomment this line to see interactions between lsp client/server.
  (setq lsp-log-io t)
@@ -335,11 +356,13 @@
     (progn (haskell-mode-stylish-buffer)
            (save-buffer)))
   ;; (add-hook 'haskell-mode-hook 'haskell-decl-scan-mode)
+  ;; :hook (;; (haskell-mode . rvl/stylish-on-save)
+  ;;        (haskell-mode . direnv-update-environment))
   :bind (:map haskell-mode-map
          ("C-c h" . hoogle)
          ("C-c sh" . haskell-mode-stylish-buffer)
          ("C-c C-," . haskell-navigate-imports)
-         ("C-x C-s" . my-save)
+         ;; ("C-x C-s" . my-save)
          ;; ("M-.". my-lookup-def)
          )
   :config (message "Loaded haskell-mode")
