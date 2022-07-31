@@ -362,7 +362,7 @@
          ("C-c h" . hoogle)
          ("C-c sh" . haskell-mode-stylish-buffer)
          ("C-c C-," . haskell-navigate-imports)
-         ("C-x C-s" . my-save)
+         ;; ("C-x C-s" . my-save)
          ;; ("M-.". my-lookup-def)
          )
   :config (message "Loaded haskell-mode")

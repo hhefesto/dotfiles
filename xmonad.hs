@@ -42,10 +42,10 @@ myManageHook = composeAll
 
 main = do
     xmproc <- spawnPipe "xmobar"
-    xmonad $ defaultConfig
-        { manageHook = myManageHook <+> manageHook defaultConfig
-        , layoutHook = avoidStruts . mySpacing $ layoutHook defaultConfig
-        , handleEventHook = handleEventHook defaultConfig <+> docksEventHook
+    xmonad . docks $ def
+        { manageHook = myManageHook <+> manageHook def
+        , layoutHook = avoidStruts . mySpacing $ layoutHook def
+        , handleEventHook = handleEventHook def -- <+> docksEventHook
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "darkgreen" "" . shorten 20
