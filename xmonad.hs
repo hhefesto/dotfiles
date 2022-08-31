@@ -20,6 +20,8 @@ myStartupHook = do
   runOrRaise "nautilus" (className =? "Org.gnome.Nautilus")
   runOrRaise "firefox" (className =? "firefox-default")
   runOrRaise "signal-desktop" (className =? "Signal")
+  runOrRaise "teams" (className =? "teams")
+  runOrRaise "slack" (className =? "slack")
   unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 myModMask            = mod4Mask                        -- Sets modkey to super/windows key
@@ -37,6 +39,8 @@ myManageHook = composeAll
    , className =? "Org.gnome.Nautilus" --> doShift "3"
    , className =? "Gnome-control-center" --> doShift "4"
    , className =? "Signal" --> doShift "6"
+   , className =? "teams" --> doShift "5"
+   , className =? "slack" --> doShift "5"
    , manageDocks
    ]
 
@@ -58,9 +62,9 @@ main = do
         , terminal           = myTerminal
         } `additionalKeysP`
         [ ("<Print>", spawn "scrot -e \'mv $f ~/Pictures/Screenshots\'")
-        , ("M-u", decrease) -- decrease brightness
-        , ("M-i", increase) -- increase brightness
-        , ("M-y", setBrightness 100) -- set to minimum brightness
+        , ("M-u", liftIO $ change (\i -> i - 10) >> pure ()) -- decrease brightness
+        , ("M-i", liftIO $ change (\i -> i + 10) >> pure ()) -- increase brightness
+        , ("M-y", setBrightness 1) -- set to minimum brightness
         , ("M-j", spawn "amixer -q sset Master 2%-")
         , ("M-k", spawn "amixer -q sset Master 2%+")
         , ("M-m", spawn "amixer set Master toggle")
