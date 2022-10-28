@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%StdinReader% | %multicpu% | %multicoretemp% | %memory% | %swap% | %dynnetwork% }{ %kbd% || %date% || %battery% "
+   , template = "%StdinReader% }{ %multicpu% || %dynnetwork% || %multicoretemp% || %memory% | %swap% || %date% || %battery% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -53,6 +53,7 @@ Config {
                              , "--normal"   , "darkorange"
                              , "--high"     , "darkred"
                              ] 10
+
 
         -- cpu core temperature monitor
         , Run MultiCoreTemp  [ "-t", "Temp: <avg>°C | <avgpc>%"
@@ -107,21 +108,3 @@ Config {
         , Run StdinReader
         ]
    }
-
-
-
--- Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
---        , bgColor = "black"
---        , fgColor = "grey"
---        , position = TopW L 90
---        , commands = [ Run Weather "EGPF" ["-t"," <tempF>F","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
---                     , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
---                     , Run Memory ["-t","Mem: <usedratio>%"] 10
---                     , Run Swap [] 10
---                     , Run Date "%a %b %_d %l:%M" "date" 10
---                     , Run StdinReader
---                     ]
---        , sepChar = "%"
---        , alignSep = "}{"
---        , template = "%StdinReader% }{ %cpu% | %memory% * %swap%    <fc=#ee9a00>%date%</fc> | %EGPF%"
---        }
