@@ -21,7 +21,8 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "Hack" :size 22)) ;; thinkpad y xps
+;; (setq doom-font (font-spec :family "Hack" :size 22)) ;; thinkpad y xps
+(setq doom-font (font-spec :family "Hack" :size 35)) ;; thinkpad y xps
 ;; (setq doom-font (font-spec :family "Hack" :size 16));; desktop
 ;; (setq doom-font (font-spec :family "JetBrains Mono" :size 24)
 ;;       doom-big-font (font-spec :family "JetBrains Mono" :size 36)

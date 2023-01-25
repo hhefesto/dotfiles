@@ -1,7 +1,7 @@
 Config {
 
    -- appearance
-     font =         "xft:Bitstream Vera Sans Mono:size=18:bold:antialias=true"
+     font =         "xft:Bitstream Vera Sans Mono:size=35:bold:antialias=true"
    , bgColor =      "black"
    , fgColor =      "#646464"
    , position =     Bottom
@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%StdinReader% }{ %multicpu% || %dynnetwork% || %multicoretemp% || %memory% | %swap% || %date% || %battery% "
+   , template = "%StdinReader% || %multicpu% }{ %multicoretemp% || %dynnetwork% || %memory% | %swap% || %date% || %battery% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
