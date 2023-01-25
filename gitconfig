@@ -1,5 +1,5 @@
 [user]
-        email = dherrera@fpcomplete.com
+        email = daniel.herrera@tvc.simspace.com
 	name = hhefesto
 [alias]
         lg = !"git lg1 --simplify-by-decoration"
