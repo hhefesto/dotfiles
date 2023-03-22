@@ -17,3 +17,5 @@
         editor = emacs
 [merge]
         conflictstyle = diff3
+[safe]
+	directory = /etc/nixos
