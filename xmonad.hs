@@ -58,8 +58,9 @@ main = do
         , terminal           = myTerminal
         } `additionalKeysP`
         [ ("<Print>", spawn "scrot -e \'mv $f ~/Pictures/Screenshots\'")
-        , ("M-u", decrease) -- decrease brightness
-        , ("M-i", increase) -- increase brightness
+        , ("M-u", liftIO $ change (\i -> i - 10) >> pure ()) -- decrease brightness
+        , ("M-i", liftIO $ change (\i -> i + 10) >> pure ()) -- increase brightness
+        , ("M-y", setBrightness 1) -- set to minimum brightness
         , ("M-j", spawn "amixer -q sset Master 2%-")
         , ("M-k", spawn "amixer -q sset Master 2%+")
         , ("M-m", spawn "amixer set Master toggle")
