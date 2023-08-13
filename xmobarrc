@@ -2,17 +2,17 @@
 Config { 
 
    -- appearance
-     font =         "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"
+     font =         "Bitstream Vera Sans Mono 13"
    , bgColor =      "black"
    , fgColor =      "#646464"
-   , position =     Bottom
+   , position =     BottomH 50
    , border =       BottomB
    , borderColor =  "#646464"
 
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%StdinReader% | %multicpu% | %multicoretemp% | %memory% | %swap% | %dynnetwork% }{ %kbd% || %date% || %battery% "
+   , template = "%StdinReader% || %multicpu% }{ %multicoretemp% || %dynnetwork% || %memory% | %swap% || %date% || %battery% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -36,7 +36,7 @@ Config {
    --   The --template option controls how the plugin is displayed. Text
    --   color can be set by enclosing in <fc></fc> tags. For more details
    --   see http://projects.haskell.org/xmobar/#system-monitor-plugins.
-   , commands = 
+   , commands =
         -- weather monitor
         [ Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"
                              , "--Low"      , "1000"       -- units: B/s
