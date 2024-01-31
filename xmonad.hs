@@ -20,6 +20,7 @@ myStartupHook = do
   runOrRaise "nautilus" (className =? "Org.gnome.Nautilus")
   runOrRaise "firefox" (className =? "firefox-default")
   runOrRaise "signal-desktop" (className =? "Signal")
+  runOrRaise "discord" (className =? "discord")
   unsafeSpawn "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 myModMask            = mod4Mask                        -- Sets modkey to super/windows key
@@ -37,6 +38,7 @@ myManageHook = composeAll
   , className =? "Org.gnome.Nautilus" --> doShift "3"
   , className =? "Gnome-control-center" --> doShift "4"
   , className =? "Signal" --> doShift "6"
+  , className =? "discord" --> doShift "5"
   , manageDocks
   ]
 
@@ -61,7 +63,7 @@ main = do
     , ("M-u", liftIO $ change (\i -> i - 10) >> pure ()) -- decrease brightness
     , ("M-i", liftIO $ change (\i -> i + 10) >> pure ()) -- increase brightness
     , ("M-y", setBrightness 1) -- set to minimum brightness
-    , ("M-j", spawn "amixer -q sset Master 2%-")
-    , ("M-k", spawn "amixer -q sset Master 2%+")
-    , ("M-m", spawn "amixer set Master toggle")
+    , ("M-j", spawn "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-")
+    , ("M-k", spawn "wpctl set-volume -l 2.2 @DEFAULT_AUDIO_SINK@ 2%+")
+    , ("M-m", spawn "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0")
     ]
